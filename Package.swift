@@ -9,7 +9,10 @@ let package = Package(
     products: [
         .library(name: "BabylAI", targets: ["BabylAI"])
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/ably/ably-cocoa", from: "1.2.41"),
+        .package(url: "https://github.com/airbnb/lottie-spm.git", from: "4.5.2")
+    ],
     targets: [
         .binaryTarget(name: "BabylAI", path: "Sources/BabylAI-iOS/BabylAI.xcframework")
     ]
