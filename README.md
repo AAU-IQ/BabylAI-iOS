@@ -173,6 +173,72 @@ struct BabylAIExample: View {
 }
 ```
 
+### 4. UIKit Implementation
+
+For UIKit-based applications, you can use the SDK's UIKit helper methods:
+
+#### Basic UIKit Usage
+
+```swift
+import UIKit
+import BabylAI
+
+class ViewController: UIViewController {
+    
+    @IBAction func openChatTapped(_ sender: UIButton) {
+        // Present the chat interface
+        BabylAISDK.shared.present(
+            from: self,
+            onMessageReceived: { message in
+                print("New message: \(message)")
+            }
+        )
+    }
+    
+    @IBAction func openActiveChatTapped(_ sender: UIButton) {
+        // Present active chat directly
+        BabylAISDK.shared.present(
+            from: self,
+            isDirect: true,
+            onMessageReceived: { message in
+                print("Active chat message: \(message)")
+            }
+        )
+    }
+}
+```
+
+#### Advanced UIKit Usage
+
+```swift
+class ChatViewController: UIViewController {
+    
+    func presentBabylAI() {
+        // Get a view controller instance for custom presentation
+        let chatController = BabylAISDK.shared.viewerController(
+            isDirect: false,
+            onMessageReceived: { [weak self] message in
+                self?.handleNewMessage(message)
+            }
+        )
+        
+        // Present with custom animation or navigation
+        present(chatController, animated: true)
+        
+        // Or push to navigation stack
+        // navigationController?.pushViewController(chatController, animated: true)
+    }
+    
+    private func handleNewMessage(_ message: String) {
+        // Handle incoming messages from BabylAI
+        DispatchQueue.main.async {
+            // Update UI, show notifications, etc.
+            print("Received: \(message)")
+        }
+    }
+}
+```
+
 ## API Reference
 
 ### BabylAISDK Class
