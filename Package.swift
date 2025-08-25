@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "BabylAI-iOS",
-    platforms: [.iOS(.v16)],
+    platforms: [.iOS(.v13)],
     products: [
         .library(name: "BabylAI", targets: ["BabylAI"])
     ],

@@ -1,6 +1,0 @@
-framework module BabylAI {
-  umbrella header "BabylAI.h"
-  export *
-
-  module * { export * }
-}
