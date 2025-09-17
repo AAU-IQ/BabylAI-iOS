@@ -23,11 +23,15 @@ An iOS SDK that provides integration with BabylAI chat functionality, supporting
 
 - 🚀 Easy integration with BabylAI chat
 - 🌓 Support for light and dark themes
-- 🌍 Multilingual support (English and Arabic)
+- 🎨 **Advanced Theme Customization** - Custom brand colors for light and dark themes
+- 🖼️ **Custom Logo Support** - Replace header logo with your brand logo
+- 🌍 **Dynamic Language Switching** - Runtime language change (English and Arabic with RTL)
 - 📬 Message receiving callback for custom notification handling
+- ⚠️ **Comprehensive Error Handling** - Global and view-specific error callbacks
 - ⚡ Quick access to active chats
 - 🏗️ Environment-based configuration (Production/Development)
 - 🔒 Secure, predefined API endpoints
+- 🎨 SwiftUI native components with automatic color generation
 
 ## Installation
 
@@ -53,12 +57,26 @@ import BabylAI
 @main
 struct MyApp: App {
     init() {
-        // Initialize BabylAI with environment configuration
+        // Create environment configuration
+        let config = EnvironmentConfig.production(enableLogging: false) // or .development()
+        
+        // Initialize BabylAI with environment configuration and custom theming
         BabylAISDK.shared.initialize(
-            with: EnvironmentConfig.development(), // or .production()
+            with: config,
             locale: .english, // or .arabic
             screenId: "YOUR_SCREEN_ID",
-            userInfo: [:]
+            userInfo: [
+                "name": "John Doe",
+                "email": "johndoe@example.com",
+                "phone": "+1234567890"
+            ],
+            themeConfig: ThemeConfig(
+                primaryColorHex: "#4A6741",           // Elegant forest green for light theme
+                secondaryColorHex: "#D4AF37",         // Sophisticated gold for light theme
+                primaryColorDarkHex: "#81C784",       // Soft sage green for dark theme
+                secondaryColorDarkHex: "#F9D71C",     // Warm amber for dark theme
+                headerLogo: UIImage(named: "your_custom_logo") // Optional: Your brand logo
+            )
         )
         
         // IMPORTANT: You MUST set up a token callback for the package to work
@@ -66,6 +84,15 @@ struct MyApp: App {
             // Example implementation to get a token
             return await getToken() // Return your access token as string
         }
+        
+        // Optional: Set up global error handling callback
+        BabylAISDK.shared.setErrorCallback { error in
+            print("❌ SDK Error [\(error.errorCode)]: \(error.userFriendlyMessage)")
+            // Handle errors globally - show notifications, log to analytics, etc.
+        }
+        
+        // Optional: Change language dynamically after initialization
+        BabylAISDK.shared.setLocale(.arabic) // Switch to Arabic with RTL support
     }
     
     var body: some Scene {
@@ -85,25 +112,83 @@ The package supports two environments:
 - **Production**: Uses production API endpoints, logging disabled by default
 - **Development**: Uses development API endpoints, logging enabled by default
 
-You can customize additional settings:
+You can create environment configurations using factory methods:
 
 ```swift
-// Production environment with custom settings
-BabylAISDK.shared.initialize(
-    with: EnvironmentConfig.production(enableLogging: false),
-    locale: .english,
-    screenId: "YOUR_SCREEN_ID",
-    userInfo: [:]
-)
+// Production environment (logging disabled by default)
+let productionConfig = EnvironmentConfig.production()
 
-// Development environment with custom settings
-BabylAISDK.shared.initialize(
-    with: EnvironmentConfig.development(enableLogging: true),
-    locale: .english,
-    screenId: "YOUR_SCREEN_ID",
-    userInfo: [:]
+// Production environment with logging enabled
+let productionConfigWithLogging = EnvironmentConfig.production(enableLogging: true)
+
+// Development environment (logging enabled by default)
+let developmentConfig = EnvironmentConfig.development()
+
+// Development environment with custom timeouts
+let customDevConfig = EnvironmentConfig.development(
+    enableLogging: true,
+    connectionTimeout: 60000,
+    receiveTimeout: 30000
 )
 ```
+
+### Dynamic Language Switching
+
+The BabylAI SDK supports dynamic language switching without requiring re-initialization. You can change the language at runtime and the SDK will update all text content and layout direction accordingly.
+
+#### Setting Language Dynamically
+
+```swift
+// Switch to Arabic with RTL support
+BabylAISDK.shared.setLocale(.arabic)
+
+// Switch back to English with LTR support
+BabylAISDK.shared.setLocale(.english)
+
+// Get current locale
+let currentLocale = BabylAISDK.shared.getLocale()
+```
+
+#### Example with UI Controls
+
+```swift
+struct LanguageSwitcher: View {
+    @State private var isArabic = false
+    
+    var body: some View {
+        HStack {
+            Text("Arabic Language")
+            Spacer()
+            Toggle("", isOn: $isArabic)
+                .onChange(of: isArabic) { enabled in
+                    // Update SDK language dynamically
+                    BabylAISDK.shared.setLocale(enabled ? .arabic : .english)
+                }
+        }
+        .padding()
+    }
+}
+```
+
+#### Language Features
+
+- **English (.english)**:
+  - Left-to-right (LTR) layout direction
+  - English text content and labels
+  - Western number formatting
+
+- **Arabic (.arabic)**:
+  - Right-to-left (RTL) layout direction
+  - Arabic text content and labels
+  - Arabic/Eastern number formatting
+  - Proper RTL text alignment
+
+#### Notes
+
+- Language changes take effect immediately in active SDK views
+- The locale setting persists across SDK sessions
+- RTL layout automatically adjusts all UI components, icons, and navigation
+- No re-initialization required when switching languages
 
 ### 2. Basic Implementation
 
@@ -245,15 +330,32 @@ class ChatViewController: UIViewController {
 
 #### Methods
 
-- `BabylAISDK.shared.initialize(with: EnvironmentConfig, locale: BabylAILocale, screenId: String, userInfo: [String: Any])`: Initialize BabylAI with environment configuration
+- `BabylAISDK.shared.initialize(with: EnvironmentConfig, locale: BabylAILocale, screenId: String, userInfo: [String: Any]? = nil, themeConfig: ThemeConfig? = nil)`: Initialize BabylAI with environment configuration and optional theme customization
 - `BabylAISDK.shared.setTokenCallback(_ callback: @escaping () async throws -> String)`: Set a callback function that will be called when the token needs to be refreshed
-- `BabylAISDK.shared.viewer(isDirect: Bool = false, onMessageReceived: ((String) -> Void)? = nil) -> some View`: Get the BabylAI chat interface as a SwiftUI view
-- `BabylAISDK.shared.present(from: UIViewController, isDirect: Bool = false, onMessageReceived: ((String) -> Void)? = nil)`: Present the chat interface from a UIKit view controller
+- `BabylAISDK.shared.setErrorCallback(_ callback: @escaping (BabylAIError) -> Void)`: Set a global error callback to handle all SDK errors
+- `BabylAISDK.shared.setLocale(_ locale: BabylAILocale)`: Change the SDK language dynamically without re-initialization
+- `BabylAISDK.shared.getLocale() -> BabylAILocale`: Get the currently selected SDK language
+- `BabylAISDK.shared.viewer(theme: BabylAITheme = .light, isDirect: Bool = false, onMessageReceived: ((String) -> Void)? = nil, onErrorReceived: ((BabylAIError) -> Void)? = nil, onDismiss: (() -> Void)? = nil) -> some View`: Get the BabylAI chat interface as a SwiftUI view
+- `BabylAISDK.shared.makeView(theme: BabylAITheme, userInfo: [String: Any], onMessageReceived: ((String) -> Void)? = nil, onErrorReceived: ((BabylAIError) -> Void)? = nil) -> some View`: Create the main SDK view
+- `BabylAISDK.shared.present(theme: BabylAITheme = .light, from: UIViewController, isDirect: Bool = false, onMessageReceived: ((String) -> Void)? = nil, onErrorReceived: ((BabylAIError) -> Void)? = nil)`: Present the chat interface from a UIKit view controller
+- `BabylAISDK.shared.viewerController(theme: BabylAITheme = .light, isDirect: Bool = false, onMessageReceived: ((String) -> Void)? = nil, onErrorReceived: ((BabylAIError) -> Void)? = nil) -> UIViewController`: Get a UIKit view controller instance for custom presentation
 
 #### Environment Configuration
 
-- `EnvironmentConfig.production(enableLogging: Bool = false)`: Create production environment configuration
-- `EnvironmentConfig.development(enableLogging: Bool = true)`: Create development environment configuration
+- `EnvironmentConfig.production(enableLogging: Bool = false, connectionTimeout: Int = 30000, receiveTimeout: Int = 15000)`: Create production environment configuration
+- `EnvironmentConfig.development(enableLogging: Bool = true, connectionTimeout: Int = 30000, receiveTimeout: Int = 15000)`: Create development environment configuration
+
+#### Theme Configuration
+
+- `BabylAITheme.light`: Light theme
+- `BabylAITheme.dark`: Dark theme
+- `ThemeConfig(primaryColor, secondaryColor, primaryColorDark, secondaryColorDark, headerLogo)`: Comprehensive theme customization with separate light/dark colors and custom logo support
+- `ThemeConfig(primaryColorHex, secondaryColorHex, primaryColorDarkHex, secondaryColorDarkHex, headerLogo)`: Convenience initializer using hex color strings
+
+#### Locale Configuration
+
+- `BabylAILocale.english`: English language with LTR layout
+- `BabylAILocale.arabic`: Arabic language with RTL layout
 
 ### Token Callback
 
@@ -286,9 +388,13 @@ This ensures that your users won't experience disruptions when their token expir
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
+| theme | BabylAITheme | UI theme (.light or .dark) |
 | locale | BabylAILocale | Language (.english or .arabic) |
+| themeConfig | ThemeConfig? | Optional theme customization with brand colors and logo |
 | isDirect | Bool | Whether to open active chat directly |
 | onMessageReceived | ((String) -> Void)? | Callback for handling new messages |
+| onErrorReceived | ((BabylAIError) -> Void)? | Callback for handling view-specific errors |
+| onDismiss | (() -> Void)? | Callback for dismissal/back navigation |
 
 ## Message Handling
 
@@ -305,13 +411,117 @@ BabylAISDK.shared.viewer(
 )
 ```
 
+## Error Handling
+
+The BabylAI SDK provides comprehensive error handling with categorized error codes, detailed descriptions, and recovery suggestions. All errors are mapped to standardized `BabylAIError` instances with unique error codes for easy documentation and debugging.
+
+### Setting Up Error Handling
+
+```swift
+// Set global error callback during initialization
+BabylAISDK.shared.setErrorCallback { error in
+    print("Error Code: \(error.errorCode)")
+    print("Description: \(error.errorDescription ?? "No description")")
+    
+    if let suggestion = error.recoverySuggestion {
+        print("Recovery: \(suggestion)")
+    }
+    
+    // Handle specific error types
+    switch error {
+    case .sdkNotInitialized:
+        // Re-initialize the SDK
+        break
+    case .tokenExpired:
+        // Refresh authentication
+        break
+    case .networkError:
+        // Show network error UI
+        break
+    default:
+        // Handle other errors
+        break
+    }
+}
+```
+
+### Error Handling in Views
+
+In addition to the global error callback, individual views can also handle errors locally:
+
+```swift
+BabylAISDK.shared.viewer(
+    theme: .light,
+    onMessageReceived: { message in
+        // Handle new messages
+        handleNewMessage(message)
+    },
+    onErrorReceived: { error in
+        // Handle errors specific to this view instance
+        handleViewError(error)
+    }
+)
+```
+
+### Error Categories
+
+#### Network Errors (1000-1999)
+- **BABYLAI_NET_1001**: Connection timeout
+- **BABYLAI_NET_1002**: Server unavailable
+- **BABYLAI_NET_1003**: Invalid response
+- **BABYLAI_NET_[statusCode]**: Request failed with specific HTTP status code
+
+#### Authentication Errors (2000-2999)
+- **BABYLAI_AUTH_2001**: Authentication failed
+- **BABYLAI_AUTH_2002**: Token expired
+- **BABYLAI_AUTH_2003**: Invalid token
+- **BABYLAI_AUTH_2004**: Token refresh failed
+- **BABYLAI_AUTH_2005**: Unauthorized access
+
+#### Configuration Errors (3000-3999)
+- **BABYLAI_CFG_3001**: SDK not initialized
+- **BABYLAI_CFG_3002**: Invalid configuration
+- **BABYLAI_CFG_3003**: Missing required parameter
+- **BABYLAI_CFG_3004**: Invalid environment
+
+#### Data Errors (4000-4999)
+- **BABYLAI_DATA_4001**: Data parsing error
+- **BABYLAI_DATA_4002**: Invalid data format
+- **BABYLAI_DATA_4003**: Data not found
+- **BABYLAI_DATA_4004**: Data corrupted
+
+#### UI Errors (5000-5999)
+- **BABYLAI_UI_5001**: View presentation failed
+- **BABYLAI_UI_5002**: Theme configuration error
+- **BABYLAI_UI_5003**: Localization error
+
+### Error Properties
+
+Each `BabylAIError` provides:
+- `errorCode`: Unique error code for documentation
+- `errorDescription`: Human-readable error description
+- `recoverySuggestion`: Suggested action to resolve the error
+- `userFriendlyMessage`: User-friendly error message
+- `logEntry`: Dictionary for logging and analytics
+
+### Best Practices
+
+1. **Always set an error callback** to handle SDK errors gracefully
+2. **Use error codes** for documentation and support
+3. **Implement error code-based handling** for better user experience
+4. **Log errors** with the provided `logEntry` for debugging
+5. **Provide recovery suggestions** to users when possible
+6. **Test error scenarios** to ensure proper error handling
+
+> **Note**: View-specific error callbacks will be called in addition to the global error callback, giving you flexibility to handle errors at both global and local levels.
+
 ## Contributing
 
 For any issues or feature requests, please contact the package maintainers or submit an issue on the repository.
 
 ## License
 
-Copyright © 2024 BabylAI
+Copyright © 2025 BabylAI
 
 This software is provided under a custom license agreement. Usage is permitted only with explicit authorization from BabylAI. This software may not be redistributed, modified, or used in derivative works without written permission from BabylAI.
 
