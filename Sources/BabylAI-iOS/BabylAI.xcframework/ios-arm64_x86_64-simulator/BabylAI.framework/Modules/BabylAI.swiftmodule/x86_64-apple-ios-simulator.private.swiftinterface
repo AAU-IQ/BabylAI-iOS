@@ -11,6 +11,7 @@ import Swift
 import SwiftUI
 import SwiftUICore
 import UIKit
+import UniformTypeIdentifiers
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -84,6 +85,69 @@ public enum EnvironmentService {
   }
   public static func reset()
 }
+public struct ThemeConfig {
+  public let primaryColor: UIKit.UIColor?
+  public let secondaryColor: UIKit.UIColor?
+  public let primaryColorDark: UIKit.UIColor?
+  public let secondaryColorDark: UIKit.UIColor?
+  public let headerLogo: UIKit.UIImage?
+  public init(primaryColor: UIKit.UIColor? = nil, secondaryColor: UIKit.UIColor? = nil, primaryColorDark: UIKit.UIColor? = nil, secondaryColorDark: UIKit.UIColor? = nil, headerLogo: UIKit.UIImage? = nil)
+  public init(primaryColorHex: Swift.String? = nil, secondaryColorHex: Swift.String? = nil, primaryColorDarkHex: Swift.String? = nil, secondaryColorDarkHex: Swift.String? = nil, headerLogo: UIKit.UIImage? = nil)
+}
+@_Concurrency.MainActor @preconcurrency public struct ThemedColorReader<Content> : SwiftUICore.View where Content : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(@SwiftUICore.ViewBuilder content: @escaping (BabylAI.ThemeConfig?, SwiftUICore.ColorScheme) -> Content)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s7BabylAI17ThemedColorReaderV4bodyQrvp", 0) __<Content>
+}
+public func themedMainColor(themeConfig: BabylAI.ThemeConfig?, colorScheme: SwiftUICore.ColorScheme) -> SwiftUICore.Color
+public func themedPrimaryContainer(themeConfig: BabylAI.ThemeConfig?, colorScheme: SwiftUICore.ColorScheme) -> SwiftUICore.Color
+public func themedCustomerBubble(themeConfig: BabylAI.ThemeConfig?, colorScheme: SwiftUICore.ColorScheme) -> SwiftUICore.Color
+public func themedAgentBubble(themeConfig: BabylAI.ThemeConfig?, colorScheme: SwiftUICore.ColorScheme) -> SwiftUICore.Color
+public func themedAiBubble(themeConfig: BabylAI.ThemeConfig?, colorScheme: SwiftUICore.ColorScheme) -> SwiftUICore.Color
+public enum BabylAIError : Swift.Error, Foundation.LocalizedError {
+  case networkError(code: Swift.Int, message: Swift.String)
+  case connectionTimeout
+  case serverUnavailable
+  case invalidResponse
+  case requestFailed(statusCode: Swift.Int)
+  case authenticationFailed
+  case tokenExpired
+  case invalidToken
+  case tokenRefreshFailed
+  case unauthorizedAccess
+  case sdkNotInitialized
+  case invalidConfiguration
+  case missingRequiredParameter(Swift.String)
+  case invalidEnvironment
+  case dataParsingError
+  case invalidDataFormat
+  case dataNotFound
+  case dataCorrupted
+  case viewPresentationFailed
+  case themeConfigurationError
+  case localizationError
+  case systemError(Swift.String)
+  case memoryError
+  case fileSystemError
+  case unknownError(Swift.String)
+  public var errorCode: Swift.String {
+    get
+  }
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public var recoverySuggestion: Swift.String? {
+    get
+  }
+  public var logEntry: [Swift.String : Any] {
+    get
+  }
+  public var userFriendlyMessage: Swift.String {
+    get
+  }
+}
 public enum BabylAILocale {
   case arabic, english
   public static func == (a: BabylAI.BabylAILocale, b: BabylAI.BabylAILocale) -> Swift.Bool
@@ -124,10 +188,9 @@ public struct SenderMessage : Swift.Identifiable, Swift.Codable, Swift.Equatable
   public let senderId: Swift.String?
   public let senderType: Swift.Int
   public let messageContent: Swift.String
-  public let sentAt: Foundation.Date
   public let isSeen: Swift.Bool
   public let isAIResponse: Swift.Bool
-  public init(id: Swift.String, chatSessionId: Swift.String, senderId: Swift.String? = nil, senderType: Swift.Int, messageContent: Swift.String, sentAt: Foundation.Date, isSeen: Swift.Bool, isAIResponse: Swift.Bool)
+  public init(id: Swift.String, chatSessionId: Swift.String, senderId: Swift.String? = nil, senderType: Swift.Int, messageContent: Swift.String, isSeen: Swift.Bool, isAIResponse: Swift.Bool)
   public static func == (a: BabylAI.SenderMessage, b: BabylAI.SenderMessage) -> Swift.Bool
   public typealias ID = Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
@@ -258,6 +321,23 @@ final public class AblyService {
 @usableFromInline
 internal enum FrameworkAssets {
 }
+@_hasMissingDesignatedInitializers final public class ErrorMapper {
+  public static func map(_ error: any Swift.Error) -> BabylAI.BabylAIError
+  public static func mapURLError(_ urlError: Foundation.URLError) -> BabylAI.BabylAIError
+  public static func mapDecodingError(_ decodingError: Swift.DecodingError) -> BabylAI.BabylAIError
+  public static func mapEncodingError(_ encodingError: Swift.EncodingError) -> BabylAI.BabylAIError
+  public static func mapGenericError(_ error: any Swift.Error) -> BabylAI.BabylAIError
+  public static func networkError(statusCode: Swift.Int, message: Swift.String? = nil) -> BabylAI.BabylAIError
+  public static func authenticationError(statusCode: Swift.Int) -> BabylAI.BabylAIError
+  public static func missingParameterError(_ parameter: Swift.String) -> BabylAI.BabylAIError
+  public static func systemError(_ message: Swift.String) -> BabylAI.BabylAIError
+  @objc deinit
+}
+extension Swift.Error {
+  public var asBabylAIError: BabylAI.BabylAIError {
+    get
+  }
+}
 public enum CairoFontWeight : Swift.String {
   case regular
   case medium
@@ -274,6 +354,7 @@ public enum CairoFontWeight : Swift.String {
 }
 public enum AppFont {
   public static func cairo(_ weight: BabylAI.CairoFontWeight, size: CoreFoundation.CGFloat) -> SwiftUICore.Font
+  public static func cairoUIFont(_ weight: BabylAI.CairoFontWeight, size: CoreFoundation.CGFloat) -> UIKit.UIFont
 }
 @_hasMissingDesignatedInitializers @usableFromInline
 final internal class BundleFinder {
@@ -405,19 +486,23 @@ public enum BabylAITheme : Swift.String {
 }
 @_hasMissingDesignatedInitializers final public class BabylAISDK {
   public static let shared: BabylAI.BabylAISDK
-  final public func initialize(with config: BabylAI.EnvironmentConfig, locale: BabylAI.BabylAILocale, screenId: Swift.String, userInfo: [Swift.String : Any])
+  final public func initialize(with config: BabylAI.EnvironmentConfig, locale: BabylAI.BabylAILocale, screenId: Swift.String, userInfo: [Swift.String : Any]? = nil, themeConfig: BabylAI.ThemeConfig? = nil)
   final public func setTokenCallback(_ callback: @escaping () async throws -> Swift.String)
-  @_Concurrency.MainActor final public func makeView(theme: BabylAI.BabylAITheme, userInfo: [Swift.String : Any], onMessageReceived: ((Swift.String) -> Swift.Void)? = nil) -> some SwiftUICore.View
+  final public func setErrorCallback(_ callback: @escaping (BabylAI.BabylAIError) -> Swift.Void)
+  final public func setLocale(_ locale: BabylAI.BabylAILocale)
+  final public func getLocale() -> BabylAI.BabylAILocale
+  @_Concurrency.MainActor final public func makeView(theme: BabylAI.BabylAITheme, userInfo: [Swift.String : Any], onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil) -> some SwiftUICore.View
   
-  @_Concurrency.MainActor final public func viewer(isDirect: Swift.Bool = false, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil) -> some SwiftUICore.View
+  @_Concurrency.MainActor final public func viewer(isDirect: Swift.Bool = false, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil) -> some SwiftUICore.View
   
-  @_Concurrency.MainActor final public func viewerController(theme: BabylAI.BabylAITheme, isDirect: Swift.Bool = false, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil) -> UIKit.UIViewController
-  @_Concurrency.MainActor final public func present(theme: BabylAI.BabylAITheme, from presenter: UIKit.UIViewController, isDirect: Swift.Bool = false, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor final public func viewerController(theme: BabylAI.BabylAITheme, isDirect: Swift.Bool = false, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil) -> UIKit.UIViewController
+  @_Concurrency.MainActor final public func present(theme: BabylAI.BabylAITheme, from presenter: UIKit.UIViewController, isDirect: Swift.Bool = false, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil)
   @objc deinit
 }
 extension BabylAI.BabylAIEnvironment : Swift.Equatable {}
 extension BabylAI.BabylAIEnvironment : Swift.Hashable {}
 extension BabylAI.BabylAIEnvironment : Swift.RawRepresentable {}
+extension BabylAI.ThemedColorReader : Swift.Sendable {}
 extension BabylAI.BabylAILocale : Swift.Equatable {}
 extension BabylAI.BabylAILocale : Swift.Hashable {}
 extension BabylAI.SenderType : Swift.Equatable {}

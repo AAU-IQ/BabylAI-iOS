@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		c69e98G9hmxDnipG+O1xTszUMgE=
+		aMufW0xNSFA7coxQlfwte2TOU/w=
 		</data>
 		<key>Cairo-Black.ttf</key>
 		<data>
@@ -40,53 +40,57 @@
 		<data>
 		EZx5kZAs7JxlkE/cJ7wvboNoB1s=
 		</data>
+		<key>ErrorDocumentation.md</key>
+		<data>
+		p6nneDUoC8IQyD8d9Dt87vje2Wg=
+		</data>
 		<key>Headers/BabylAI.h</key>
 		<data>
 		EmxcK6S3fQTubkoPyTPT8UUVxoQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		E+kfYL3A5fMZjCdTPXUdQFdMJoM=
+		PRhMx2F+jziUC5OWlKO96AD6vU4=
 		</data>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		BtX6yOGmVlEW3JxKr/G5nP9ncrs=
+		TPFdWi0oUwVin+Jp46hSUemJp+g=
 		</data>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		/LlFij5Frtpm+e0w5+nZKeyku7g=
+		mfBDCC5yFs1Jejb2TLF5eA1zR4M=
 		</data>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		1lYrtdKxZjqVkrdkkjxWu6R1F6U=
+		8KcnfvwAIt/VnnFX3vyojFoYI18=
 		</data>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/LlFij5Frtpm+e0w5+nZKeyku7g=
+		mfBDCC5yFs1Jejb2TLF5eA1zR4M=
 		</data>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		l3GMxq9+uYPDToU8eHg02k9LRg0=
+		D0UlTVyrXE95d9jWRWhdmgN0OF4=
 		</data>
 		<key>Modules/BabylAI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		BtX6yOGmVlEW3JxKr/G5nP9ncrs=
+		TPFdWi0oUwVin+Jp46hSUemJp+g=
 		</data>
 		<key>Modules/BabylAI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		a2hgNaIGSJW7aJ96YkWpJJhs6qA=
+		CtvJKVWolgZD3na68xMwXnL2CTE=
 		</data>
 		<key>Modules/BabylAI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		hhMc4rEzsEcpdoVktCU7RyXa6Hk=
+		pOQ4nWrG4Lgl/bmW2naC8P/K0OE=
 		</data>
 		<key>Modules/BabylAI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		a2hgNaIGSJW7aJ96YkWpJJhs6qA=
+		CtvJKVWolgZD3na68xMwXnL2CTE=
 		</data>
 		<key>Modules/BabylAI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		NxeqJFY6qUle6JmZqTcS11haLMw=
+		zLayvGbHXFrPiJFcJrItxKyfGmk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -121,7 +125,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jKx1C/TpvTqzupAHID1nhYcLRwLriymEq9eBla7MaZY=
+			f4Lg04HqXhQAL8YOyWayEYS4AT8ziL6YRdg1KmQ6+i0=
 			</data>
 		</dict>
 		<key>Cairo-Black.ttf</key>
@@ -180,6 +184,13 @@
 			FUq1tOXbO2TnvPi/ZnClAS526WWULvtFOZpwYP+9vtw=
 			</data>
 		</dict>
+		<key>ErrorDocumentation.md</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vBpTQ6kg+K92tXbBRBPK9ByXnzX9XD3At74LwlTb7f0=
+			</data>
+		</dict>
 		<key>Headers/BabylAI.h</key>
 		<dict>
 			<key>hash2</key>
@@ -191,70 +202,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			stnuskvN2yglwT2KUWNxHPdY2yYgNBQBkZ6Q7RIG/Xo=
+			3rn8CbiGtfyyQuOXhnOaaEqBLTbjMA0lWyBzEB1BBtc=
 			</data>
 		</dict>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HgJEHIyVV+9k+mMZQ5XEXn2DE0aZSPcx09vuj+MW3HM=
+			C1vPCphTTtBrbBz6ehdC6ZBPSjFRVIkj2NoRGByfpu8=
 			</data>
 		</dict>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			emX6TXaatCq8eU44nAY9NlNFBGihgwBSAhLMXuorLuo=
+			Lq3LkzaqK/lYGicV8oTdtlxNhIhFWceYKBYxZm1p4kk=
 			</data>
 		</dict>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HgJEHIyVV+9k+mMZQ5XEXn2DE0aZSPcx09vuj+MW3HM=
+			C1vPCphTTtBrbBz6ehdC6ZBPSjFRVIkj2NoRGByfpu8=
 			</data>
 		</dict>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Dr+07CMD6sdGyaNc0sRQ1DwZ35bU05p5FELRw3hxzZM=
+			IwWghr4gl06y2NTM78SjG4mN1FSOoax83Ekm3kHcdrE=
 			</data>
 		</dict>
 		<key>Modules/BabylAI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			stnuskvN2yglwT2KUWNxHPdY2yYgNBQBkZ6Q7RIG/Xo=
+			3rn8CbiGtfyyQuOXhnOaaEqBLTbjMA0lWyBzEB1BBtc=
 			</data>
 		</dict>
 		<key>Modules/BabylAI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			S7mJYatMzk8HL6kHmixb0aKfd5gD9NreFjiEK1OM7lw=
+			4oXzitljHVncCxxNAgv4AQTMWqW6ZFM+Hv2raL1kLJ4=
 			</data>
 		</dict>
 		<key>Modules/BabylAI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yb+xz98cgWRtnAurz+1iyxgMUBNzVqYt3e1CfVqu9UI=
+			LICzRwEKCaaMbEQ/uQA0XnfyeO0ICajRXQH/lD4cA+0=
 			</data>
 		</dict>
 		<key>Modules/BabylAI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			S7mJYatMzk8HL6kHmixb0aKfd5gD9NreFjiEK1OM7lw=
+			4oXzitljHVncCxxNAgv4AQTMWqW6ZFM+Hv2raL1kLJ4=
 			</data>
 		</dict>
 		<key>Modules/BabylAI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jX98JtfSmyWur4G8XiBFSyvDkpxU9+IXAZQQCE85WL4=
+			cEnlIo+Y9+/YVRdKWR7w6T0zEKv4h4xreUN6SOe6y9U=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
