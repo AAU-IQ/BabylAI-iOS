@@ -3679,6 +3679,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -11827,8 +11834,8 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftUICore",
-        "printedName": "SwiftUICore",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "BabylAI"
       },
@@ -13664,6 +13671,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -15146,7 +15160,7 @@
           {
             "kind": "Function",
             "name": "initialize",
-            "printedName": "initialize(with:locale:screenId:userInfo:themeConfig:)",
+            "printedName": "initialize(with:locale:userInfo:themeConfig:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15164,12 +15178,6 @@
                 "name": "BabylAILocale",
                 "printedName": "BabylAI.BabylAILocale",
                 "usr": "s:7BabylAI0A8AILocaleO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -15216,8 +15224,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:7BabylAI0A5AISDKC10initialize4with6locale8screenId8userInfo11themeConfigyAA011EnvironmentL0V_AA0A8AILocaleOSSSDySSypGSgAA05ThemeL0VSgtF",
-            "mangledName": "$s7BabylAI0A5AISDKC10initialize4with6locale8screenId8userInfo11themeConfigyAA011EnvironmentL0V_AA0A8AILocaleOSSSDySSypGSgAA05ThemeL0VSgtF",
+            "usr": "s:7BabylAI0A5AISDKC10initialize4with6locale8userInfo11themeConfigyAA011EnvironmentJ0V_AA0A8AILocaleOSDySSypGSgAA05ThemeJ0VSgtF",
+            "mangledName": "$s7BabylAI0A5AISDKC10initialize4with6locale8userInfo11themeConfigyAA011EnvironmentJ0V_AA0A8AILocaleOSDySSypGSgAA05ThemeJ0VSgtF",
             "moduleName": "BabylAI",
             "declAttributes": [
               "Final",
@@ -15358,7 +15366,7 @@
           {
             "kind": "Function",
             "name": "makeView",
-            "printedName": "makeView(theme:userInfo:onMessageReceived:onErrorReceived:)",
+            "printedName": "makeView(theme:userInfo:screenId:onMessageReceived:onErrorReceived:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15397,6 +15405,12 @@
                   }
                 ],
                 "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -15454,8 +15468,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:7BabylAI0A5AISDKC8makeView5theme8userInfo17onMessageReceived0i5ErrorK0QrAA0A7AIThemeO_SDySSypGySScSgyAA0A7AIErrorOcSgtF",
-            "mangledName": "$s7BabylAI0A5AISDKC8makeView5theme8userInfo17onMessageReceived0i5ErrorK0QrAA0A7AIThemeO_SDySSypGySScSgyAA0A7AIErrorOcSgtF",
+            "usr": "s:7BabylAI0A5AISDKC8makeView5theme8userInfo8screenId17onMessageReceived0k5ErrorM0QrAA0A7AIThemeO_SDySSypGSSySScSgyAA0A7AIErrorOcSgtF",
+            "mangledName": "$s7BabylAI0A5AISDKC8makeView5theme8userInfo8screenId17onMessageReceived0k5ErrorM0QrAA0A7AIThemeO_SDySSypGSSySScSgyAA0A7AIErrorOcSgtF",
             "moduleName": "BabylAI",
             "declAttributes": [
               "Final",
@@ -15467,7 +15481,7 @@
           {
             "kind": "Function",
             "name": "viewer",
-            "printedName": "viewer(isDirect:onMessageReceived:onErrorReceived:onDismiss:)",
+            "printedName": "viewer(isDirect:screenId:onMessageReceived:onErrorReceived:onDismiss:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15488,6 +15502,12 @@
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -15571,8 +15591,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:7BabylAI0A5AISDKC6viewer8isDirect17onMessageReceived0g5ErrorI00G7DismissQrSb_ySScSgyAA0A7AIErrorOcSgyycSgtF",
-            "mangledName": "$s7BabylAI0A5AISDKC6viewer8isDirect17onMessageReceived0g5ErrorI00G7DismissQrSb_ySScSgyAA0A7AIErrorOcSgyycSgtF",
+            "usr": "s:7BabylAI0A5AISDKC6viewer8isDirect8screenId17onMessageReceived0i5ErrorK00I7DismissQrSb_SSySScSgyAA0A7AIErrorOcSgyycSgtF",
+            "mangledName": "$s7BabylAI0A5AISDKC6viewer8isDirect8screenId17onMessageReceived0i5ErrorK00I7DismissQrSb_SSySScSgyAA0A7AIErrorOcSgyycSgtF",
             "moduleName": "BabylAI",
             "declAttributes": [
               "Final",
@@ -15585,7 +15605,7 @@
           {
             "kind": "Function",
             "name": "viewerController",
-            "printedName": "viewerController(theme:isDirect:onMessageReceived:onErrorReceived:)",
+            "printedName": "viewerController(theme:isDirect:screenId:onMessageReceived:onErrorReceived:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15605,6 +15625,12 @@
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -15662,8 +15688,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:7BabylAI0A5AISDKC16viewerController5theme8isDirect17onMessageReceived0i5ErrorK0So06UIViewE0CAA0A7AIThemeO_SbySScSgyAA0A7AIErrorOcSgtF",
-            "mangledName": "$s7BabylAI0A5AISDKC16viewerController5theme8isDirect17onMessageReceived0i5ErrorK0So06UIViewE0CAA0A7AIThemeO_SbySScSgyAA0A7AIErrorOcSgtF",
+            "usr": "s:7BabylAI0A5AISDKC16viewerController5theme8isDirect8screenId17onMessageReceived0k5ErrorM0So06UIViewE0CAA0A7AIThemeO_SbSSySScSgyAA0A7AIErrorOcSgtF",
+            "mangledName": "$s7BabylAI0A5AISDKC16viewerController5theme8isDirect8screenId17onMessageReceived0k5ErrorM0So06UIViewE0CAA0A7AIThemeO_SbSSySScSgyAA0A7AIErrorOcSgtF",
             "moduleName": "BabylAI",
             "declAttributes": [
               "Final",
@@ -15676,7 +15702,7 @@
           {
             "kind": "Function",
             "name": "present",
-            "printedName": "present(theme:from:isDirect:onMessageReceived:onErrorReceived:)",
+            "printedName": "present(theme:from:isDirect:screenId:onMessageReceived:onErrorReceived:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15704,6 +15730,12 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "Optional",
                 "printedName": "((Swift.String) -> ())?",
                 "children": [
@@ -15758,8 +15790,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:7BabylAI0A5AISDKC7present5theme4from8isDirect17onMessageReceived0i5ErrorK0yAA0A7AIThemeO_So16UIViewControllerCSbySScSgyAA0A7AIErrorOcSgtF",
-            "mangledName": "$s7BabylAI0A5AISDKC7present5theme4from8isDirect17onMessageReceived0i5ErrorK0yAA0A7AIThemeO_So16UIViewControllerCSbySScSgyAA0A7AIErrorOcSgtF",
+            "usr": "s:7BabylAI0A5AISDKC7present5theme4from8isDirect8screenId17onMessageReceived0k5ErrorM0yAA0A7AIThemeO_So16UIViewControllerCSbSSySScSgyAA0A7AIErrorOcSgtF",
+            "mangledName": "$s7BabylAI0A5AISDKC7present5theme4from8isDirect8screenId17onMessageReceived0k5ErrorM0yAA0A7AIThemeO_So16UIViewControllerCSbSSySScSgyAA0A7AIErrorOcSgtF",
             "moduleName": "BabylAI",
             "declAttributes": [
               "Final",
@@ -15885,6 +15917,7 @@
         "declAttributes": [
           "Preconcurrency",
           "TypeEraser",
+          "TypeEraser",
           "OriginallyDefinedIn",
           "OriginallyDefinedIn",
           "OriginallyDefinedIn",
@@ -15992,6 +16025,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       }
@@ -16219,35 +16259,35 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Utils\/fonts.swift",
       "kind": "StringLiteral",
-      "offset": 185,
+      "offset": 181,
       "length": 15,
       "value": "\"Cairo-Regular\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Utils\/fonts.swift",
       "kind": "StringLiteral",
-      "offset": 219,
+      "offset": 215,
       "length": 14,
       "value": "\"Cairo-Medium\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Utils\/fonts.swift",
       "kind": "StringLiteral",
-      "offset": 254,
+      "offset": 250,
       "length": 16,
       "value": "\"Cairo-SemiBold\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Utils\/fonts.swift",
       "kind": "StringLiteral",
-      "offset": 287,
+      "offset": 283,
       "length": 12,
       "value": "\"Cairo-Bold\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Utils\/fonts.swift",
       "kind": "BooleanLiteral",
-      "offset": 858,
+      "offset": 854,
       "length": 5,
       "value": "false"
     },
@@ -16751,28 +16791,28 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 4386,
+      "offset": 4439,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 6303,
+      "offset": 6633,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 7127,
+      "offset": 7457,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 8426,
+      "offset": 8802,
       "length": 5,
       "value": "false"
     },
