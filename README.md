@@ -64,7 +64,6 @@ struct MyApp: App {
         BabylAISDK.shared.initialize(
             with: config,
             locale: .english, // or .arabic
-            screenId: "YOUR_SCREEN_ID",
             userInfo: [
                 "name": "John Doe",
                 "email": "johndoe@example.com",
@@ -274,6 +273,7 @@ class ViewController: UIViewController {
         // Present the chat interface
         BabylAISDK.shared.present(
             from: self,
+            screenId: "YOUR_SCREEN_ID",
             onMessageReceived: { message in
                 print("New message: \(message)")
             }
@@ -285,6 +285,7 @@ class ViewController: UIViewController {
         BabylAISDK.shared.present(
             from: self,
             isDirect: true,
+            screenId: "YOUR_SCREEN_ID",
             onMessageReceived: { message in
                 print("Active chat message: \(message)")
             }
@@ -302,6 +303,7 @@ class ChatViewController: UIViewController {
         // Get a view controller instance for custom presentation
         let chatController = BabylAISDK.shared.viewerController(
             isDirect: false,
+            screenId: "YOUR_SCREEN_ID",
             onMessageReceived: { [weak self] message in
                 self?.handleNewMessage(message)
             }
