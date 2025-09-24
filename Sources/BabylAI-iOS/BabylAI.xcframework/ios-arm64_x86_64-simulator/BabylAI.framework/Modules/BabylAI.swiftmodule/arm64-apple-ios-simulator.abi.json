@@ -3080,6 +3080,43 @@
           },
           {
             "kind": "Var",
+            "name": "noActiveChat",
+            "printedName": "noActiveChat",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BabylAI.BabylAIError.Type) -> BabylAI.BabylAIError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BabylAIError",
+                    "printedName": "BabylAI.BabylAIError",
+                    "usr": "s:7BabylAI0A7AIErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BabylAI.BabylAIError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BabylAIError",
+                        "printedName": "BabylAI.BabylAIError",
+                        "usr": "s:7BabylAI0A7AIErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7BabylAI0A7AIErrorO12noActiveChatyA2CmF",
+            "mangledName": "$s7BabylAI0A7AIErrorO12noActiveChatyA2CmF",
+            "moduleName": "BabylAI"
+          },
+          {
+            "kind": "Var",
             "name": "viewPresentationFailed",
             "printedName": "viewPresentationFailed",
             "children": [
@@ -11241,6 +11278,159 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "onConnectionTerminated",
+            "printedName": "onConnectionTerminated",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BabylAI11AblyServiceC22onConnectionTerminatedyycSgvp",
+            "mangledName": "$s7BabylAI11AblyServiceC22onConnectionTerminatedyycSgvp",
+            "moduleName": "BabylAI",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI11AblyServiceC22onConnectionTerminatedyycSgvg",
+                "mangledName": "$s7BabylAI11AblyServiceC22onConnectionTerminatedyycSgvg",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI11AblyServiceC22onConnectionTerminatedyycSgvs",
+                "mangledName": "$s7BabylAI11AblyServiceC22onConnectionTerminatedyycSgvs",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI11AblyServiceC22onConnectionTerminatedyycSgvM",
+                "mangledName": "$s7BabylAI11AblyServiceC22onConnectionTerminatedyycSgvM",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -12645,6 +12835,13 @@
         "kind": "Import",
         "name": "UniformTypeIdentifiers",
         "printedName": "UniformTypeIdentifiers",
+        "declKind": "Import",
+        "moduleName": "BabylAI"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "BabylAI"
       },
@@ -15160,7 +15357,7 @@
           {
             "kind": "Function",
             "name": "initialize",
-            "printedName": "initialize(with:locale:userInfo:themeConfig:)",
+            "printedName": "initialize(with:locale:userInfo:themeConfig:onMessageReceived:onErrorReceived:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15221,11 +15418,65 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.String) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((BabylAI.BabylAIError) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BabylAI.BabylAIError) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BabylAIError",
+                        "printedName": "BabylAI.BabylAIError",
+                        "usr": "s:7BabylAI0A7AIErrorO"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7BabylAI0A5AISDKC10initialize4with6locale8userInfo11themeConfigyAA011EnvironmentJ0V_AA0A8AILocaleOSDySSypGSgAA05ThemeJ0VSgtF",
-            "mangledName": "$s7BabylAI0A5AISDKC10initialize4with6locale8userInfo11themeConfigyAA011EnvironmentJ0V_AA0A8AILocaleOSDySSypGSgAA05ThemeJ0VSgtF",
+            "usr": "s:7BabylAI0A5AISDKC10initialize4with6locale8userInfo11themeConfig17onMessageReceived0k5ErrorM0yAA011EnvironmentJ0V_AA0A8AILocaleOSDySSypGSgAA05ThemeJ0VSgySScSgyAA0A7AIErrorOcSgtF",
+            "mangledName": "$s7BabylAI0A5AISDKC10initialize4with6locale8userInfo11themeConfig17onMessageReceived0k5ErrorM0yAA011EnvironmentJ0V_AA0A8AILocaleOSDySSypGSgAA05ThemeJ0VSgySScSgyAA0A7AIErrorOcSgtF",
             "moduleName": "BabylAI",
             "declAttributes": [
               "Final",
@@ -15597,8 +15848,7 @@
             "declAttributes": [
               "Final",
               "AccessControl",
-              "Custom",
-              "RawDocComment"
+              "Custom"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -15702,7 +15952,7 @@
           {
             "kind": "Function",
             "name": "present",
-            "printedName": "present(theme:from:isDirect:screenId:onMessageReceived:onErrorReceived:)",
+            "printedName": "present(theme:from:screenId:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15723,81 +15973,60 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((Swift.String) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.String) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((BabylAI.BabylAIError) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(BabylAI.BabylAIError) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "BabylAIError",
-                        "printedName": "BabylAI.BabylAIError",
-                        "usr": "s:7BabylAI0A7AIErrorO"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7BabylAI0A5AISDKC7present5theme4from8isDirect8screenId17onMessageReceived0k5ErrorM0yAA0A7AIThemeO_So16UIViewControllerCSbSSySScSgyAA0A7AIErrorOcSgtF",
-            "mangledName": "$s7BabylAI0A5AISDKC7present5theme4from8isDirect8screenId17onMessageReceived0k5ErrorM0yAA0A7AIThemeO_So16UIViewControllerCSbSSySScSgyAA0A7AIErrorOcSgtF",
+            "usr": "s:7BabylAI0A5AISDKC7present5theme4from8screenIdyAA0A7AIThemeO_So16UIViewControllerCSStF",
+            "mangledName": "$s7BabylAI0A5AISDKC7present5theme4from8screenIdyAA0A7AIThemeO_So16UIViewControllerCSStF",
             "moduleName": "BabylAI",
             "declAttributes": [
               "Final",
               "AccessControl",
               "Custom",
               "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "presentActiveChat",
+            "printedName": "presentActiveChat(theme:from:screenId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BabylAITheme",
+                "printedName": "BabylAI.BabylAITheme",
+                "usr": "s:7BabylAI0A7AIThemeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7BabylAI0A5AISDKC17presentActiveChat5theme4from8screenIdyAA0A7AIThemeO_So16UIViewControllerCSStF",
+            "mangledName": "$s7BabylAI0A5AISDKC17presentActiveChat5theme4from8screenIdyAA0A7AIThemeO_So16UIViewControllerCSStF",
+            "moduleName": "BabylAI",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Custom"
             ],
             "funcSelfKind": "NonMutating"
           }
@@ -16180,60 +16409,18 @@
       "value": "\"chatSession\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/AblyService.swift",
-      "kind": "BooleanLiteral",
-      "offset": 348,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "Array",
-      "offset": 512,
+      "offset": 549,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 559,
+      "offset": 589,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 603,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 652,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 739,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 899,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
-      "kind": "Dictionary",
-      "offset": 1125,
-      "length": 3,
-      "value": "[]"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/HelpScreenManager.swift",
@@ -16300,78 +16487,29 @@
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/ViewModels\/ChatSessionViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 493,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/ViewModels\/ChatSessionViewModel.swift",
       "kind": "Array",
-      "offset": 600,
+      "offset": 464,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/ViewModels\/ChatSessionViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 647,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/ViewModels\/ChatSessionViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 691,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/ViewModels\/ChatSessionViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 740,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/ViewModels\/ChatSessionViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 786,
+      "offset": 507,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/ViewModels\/ChatSessionViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 826,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/ViewModels\/ChatSessionViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 875,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Chat Views\/ChatView.swift",
       "kind": "StringLiteral",
-      "offset": 665,
+      "offset": 3015,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Chat Views\/ChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 762,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Chat Views\/ChatView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 810,
+      "offset": 3066,
       "length": 5,
       "value": "false"
     },
@@ -16441,14 +16579,7 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpView.swift",
       "kind": "BooleanLiteral",
-      "offset": 688,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 745,
+      "offset": 693,
       "length": 5,
       "value": "false"
     },
@@ -16476,28 +16607,28 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/ChatInputView.swift",
       "kind": "StringLiteral",
-      "offset": 4795,
+      "offset": 2714,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/ChatInputView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4861,
+      "offset": 2780,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/ChatInputView.swift",
       "kind": "StringLiteral",
-      "offset": 4881,
+      "offset": 2800,
       "length": 24,
       "value": "\"اكتب رسالة...\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/ChatInputView.swift",
       "kind": "StringLiteral",
-      "offset": 4972,
+      "offset": 2891,
       "length": 4,
       "value": "\"en\""
     },
@@ -16511,161 +16642,161 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "IntegerLiteral",
-      "offset": 8872,
+      "offset": 9304,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 8922,
+      "offset": 9354,
       "length": 15,
       "value": "\"agent_divider\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 8971,
+      "offset": 9403,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 8992,
+      "offset": 9424,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 9045,
+      "offset": 9477,
       "length": 10,
       "value": "\"thinking\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9086,
+      "offset": 9518,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9107,
+      "offset": 9539,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 9160,
+      "offset": 9592,
       "length": 4,
       "value": "\"Hi\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9201,
+      "offset": 9633,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9222,
+      "offset": 9654,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 9274,
+      "offset": 9706,
       "length": 18,
       "value": "\"Hello from agent\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9326,
+      "offset": 9758,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9347,
+      "offset": 9779,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 9400,
+      "offset": 9832,
       "length": 47,
       "value": "\"Check out this website: https:\/\/www.apple.com\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9478,
+      "offset": 9910,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9499,
+      "offset": 9931,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 9552,
+      "offset": 9984,
       "length": 62,
       "value": "\"You can also visit https:\/\/developer.apple.com for more info\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9651,
+      "offset": 10083,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9672,
+      "offset": 10104,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 9724,
+      "offset": 10156,
       "length": 37,
       "value": "\"Visit https:\/\/google.com for search\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9792,
+      "offset": 10224,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9813,
+      "offset": 10245,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "IntegerLiteral",
-      "offset": 9851,
+      "offset": 10283,
       "length": 1,
       "value": "8"
     },
@@ -16791,180 +16922,166 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 4439,
+      "offset": 4336,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 6633,
+      "offset": 6676,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7457,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8802,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 630,
       "length": 13,
       "value": "\"agentBubble\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 769,
       "length": 10,
       "value": "\"aiBubble\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 917,
       "length": 16,
       "value": "\"customerBubble\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1056,
       "length": 11,
       "value": "\"mainColor\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1209,
       "length": 18,
       "value": "\"onInverseSurface\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1373,
       "length": 20,
       "value": "\"onPrimaryContainer\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1525,
       "length": 13,
       "value": "\"onSecondary\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1666,
       "length": 11,
       "value": "\"onSurface\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1801,
       "length": 9,
       "value": "\"outline\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1948,
       "length": 16,
       "value": "\"outlineVariant\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2106,
       "length": 18,
       "value": "\"primaryContainer\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2251,
       "length": 13,
       "value": "\"secondColor\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2410,
       "length": 20,
       "value": "\"secondaryContainer\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2554,
       "length": 9,
       "value": "\"surface\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2699,
       "length": 15,
       "value": "\"surfaceBright\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2856,
       "length": 18,
       "value": "\"surfaceContainer\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3110,
       "length": 13,
       "value": "\"chat-bubble\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3243,
       "length": 7,
       "value": "\"close\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3377,
       "length": 11,
       "value": "\"full-logo\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3506,
       "length": 6,
       "value": "\"logo\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3634,
       "length": 8,
       "value": "\"person\""
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/xcode\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/ahmedraad\/Library\/Developer\/Xcode\/DerivedData\/BabylAI-eqfxpikomfmnhidjuhlqbchgbfoy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/BabylAI\/IntermediateBuildFilesPath\/BabylAI.build\/Release-iphonesimulator\/BabylAI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3760,
       "length": 6,

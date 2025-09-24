@@ -143,6 +143,7 @@ public enum BabylAIError : Swift.Error, Foundation.LocalizedError {
   case invalidDataFormat
   case dataNotFound
   case dataCorrupted
+  case noActiveChat
   case viewPresentationFailed
   case themeConfigurationError
   case localizationError
@@ -346,6 +347,7 @@ final public class AblyService {
   final public var onMessageReceived: ((BabylAI.Message) -> Swift.Void)?
   final public var onError: ((Swift.String) -> Swift.Void)?
   final public var onConnectionStarted: (() -> Swift.Void)?
+  final public var onConnectionTerminated: (() -> Swift.Void)?
   public init()
   final public func initializeConnection(ablyToken: Swift.String)
   final public func startConnection()
@@ -543,7 +545,7 @@ public enum BabylAITheme : Swift.String {
 @_hasMissingDesignatedInitializers final public class BabylAISDK {
   public static let shared: BabylAI.BabylAISDK
   #if compiler(>=5.3) && $NonescapableTypes
-  final public func initialize(with config: BabylAI.EnvironmentConfig, locale: BabylAI.BabylAILocale, userInfo: [Swift.String : Any]? = nil, themeConfig: BabylAI.ThemeConfig? = nil)
+  final public func initialize(with config: BabylAI.EnvironmentConfig, locale: BabylAI.BabylAILocale, userInfo: [Swift.String : Any]? = nil, themeConfig: BabylAI.ThemeConfig? = nil, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil)
   #endif
   final public func setTokenCallback(_ callback: @escaping () async throws -> Swift.String)
   final public func setErrorCallback(_ callback: @escaping (BabylAI.BabylAIError) -> Swift.Void)
@@ -560,9 +562,8 @@ public enum BabylAITheme : Swift.String {
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor final public func viewerController(theme: BabylAI.BabylAITheme, isDirect: Swift.Bool = false, screenId: Swift.String, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil) -> UIKit.UIViewController
   #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor final public func present(theme: BabylAI.BabylAITheme, from presenter: UIKit.UIViewController, isDirect: Swift.Bool = false, screenId: Swift.String, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil)
-  #endif
+  @_Concurrency.MainActor final public func present(theme: BabylAI.BabylAITheme, from presenter: UIKit.UIViewController, screenId: Swift.String)
+  @_Concurrency.MainActor final public func presentActiveChat(theme: BabylAI.BabylAITheme, from presenter: UIKit.UIViewController, screenId: Swift.String)
   @objc deinit
 }
 extension BabylAI.BabylAIEnvironment : Swift.Equatable {}
