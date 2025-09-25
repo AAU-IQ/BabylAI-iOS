@@ -75,7 +75,15 @@ struct MyApp: App {
                 primaryColorDarkHex: "#81C784",       // Soft sage green for dark theme
                 secondaryColorDarkHex: "#F9D71C",     // Warm amber for dark theme
                 headerLogo: UIImage(named: "your_custom_logo") // Optional: Your brand logo
-            )
+            ),
+            onMessageReceived: { message in
+                // Optional: Handle global incoming messages
+                print("New message: \(message)")
+            },
+            onErrorReceived: { error in
+                // Optional: Handle global errors
+                print("❌ SDK Error [\(error.errorCode)]: \(error.userFriendlyMessage)")
+            }
         )
         
         // IMPORTANT: You MUST set up a token callback for the package to work
@@ -272,23 +280,18 @@ class ViewController: UIViewController {
     @IBAction func openChatTapped(_ sender: UIButton) {
         // Present the chat interface
         BabylAISDK.shared.present(
+            theme: .light,
             from: self,
-            screenId: "YOUR_SCREEN_ID",
-            onMessageReceived: { message in
-                print("New message: \(message)")
-            }
+            screenId: "YOUR_SCREEN_ID"
         )
     }
     
     @IBAction func openActiveChatTapped(_ sender: UIButton) {
         // Present active chat directly
-        BabylAISDK.shared.present(
+        BabylAISDK.shared.presentActiveChat(
+            theme: .light,
             from: self,
-            isDirect: true,
-            screenId: "YOUR_SCREEN_ID",
-            onMessageReceived: { message in
-                print("Active chat message: \(message)")
-            }
+            screenId: "YOUR_SCREEN_ID"
         )
     }
 }
@@ -302,11 +305,9 @@ class ChatViewController: UIViewController {
     func presentBabylAI() {
         // Get a view controller instance for custom presentation
         let chatController = BabylAISDK.shared.viewerController(
+            theme: .light,
             isDirect: false,
-            screenId: "YOUR_SCREEN_ID",
-            onMessageReceived: { [weak self] message in
-                self?.handleNewMessage(message)
-            }
+            screenId: "YOUR_SCREEN_ID"
         )
         
         // Present with custom animation or navigation
@@ -339,8 +340,9 @@ class ChatViewController: UIViewController {
 - `BabylAISDK.shared.getLocale() -> BabylAILocale`: Get the currently selected SDK language
 - `BabylAISDK.shared.viewer(theme: BabylAITheme = .light, isDirect: Bool = false, onMessageReceived: ((String) -> Void)? = nil, onErrorReceived: ((BabylAIError) -> Void)? = nil, onDismiss: (() -> Void)? = nil) -> some View`: Get the BabylAI chat interface as a SwiftUI view
 - `BabylAISDK.shared.makeView(theme: BabylAITheme, userInfo: [String: Any], onMessageReceived: ((String) -> Void)? = nil, onErrorReceived: ((BabylAIError) -> Void)? = nil) -> some View`: Create the main SDK view
-- `BabylAISDK.shared.present(theme: BabylAITheme = .light, from: UIViewController, isDirect: Bool = false, onMessageReceived: ((String) -> Void)? = nil, onErrorReceived: ((BabylAIError) -> Void)? = nil)`: Present the chat interface from a UIKit view controller
-- `BabylAISDK.shared.viewerController(theme: BabylAITheme = .light, isDirect: Bool = false, onMessageReceived: ((String) -> Void)? = nil, onErrorReceived: ((BabylAIError) -> Void)? = nil) -> UIViewController`: Get a UIKit view controller instance for custom presentation
+- `BabylAISDK.shared.present(theme: BabylAITheme, from: UIViewController, screenId: String)`: Present the chat interface from a UIKit view controller
+- `BabylAISDK.shared.presentActiveChat(theme: BabylAITheme, from: UIViewController, screenId: String)`: Present the active chat directly from a UIKit view controller
+- `BabylAISDK.shared.viewerController(theme: BabylAITheme, isDirect: Bool, screenId: String) -> UIViewController`: Get a UIKit view controller instance for custom presentation
 
 #### Environment Configuration
 
