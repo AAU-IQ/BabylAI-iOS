@@ -4532,9 +4532,113 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "retryState",
+            "printedName": "retryState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MessageRetryState",
+                "printedName": "BabylAI.MessageRetryState",
+                "usr": "s:7BabylAI17MessageRetryStateO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BabylAI7MessageV10retryStateAA0c5RetryE0Ovp",
+            "mangledName": "$s7BabylAI7MessageV10retryStateAA0c5RetryE0Ovp",
+            "moduleName": "BabylAI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageRetryState",
+                    "printedName": "BabylAI.MessageRetryState",
+                    "usr": "s:7BabylAI17MessageRetryStateO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI7MessageV10retryStateAA0c5RetryE0Ovg",
+                "mangledName": "$s7BabylAI7MessageV10retryStateAA0c5RetryE0Ovg",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorMessage",
+            "printedName": "errorMessage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BabylAI7MessageV05errorC0SSSgvp",
+            "mangledName": "$s7BabylAI7MessageV05errorC0SSSgvp",
+            "moduleName": "BabylAI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI7MessageV05errorC0SSSgvg",
+                "mangledName": "$s7BabylAI7MessageV05errorC0SSSgvg",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(text:senderType:needsAgent:isSentByUser:time:)",
+            "printedName": "init(text:senderType:needsAgent:isSentByUser:time:retryState:errorMessage:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4572,11 +4676,33 @@
                 "printedName": "Foundation.Date",
                 "hasDefaultArg": true,
                 "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MessageRetryState",
+                "printedName": "BabylAI.MessageRetryState",
+                "hasDefaultArg": true,
+                "usr": "s:7BabylAI17MessageRetryStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:7BabylAI7MessageV4text10senderType10needsAgent12isSentByUser4timeACSS_AA06SenderF0OS2b10Foundation4DateVtcfc",
-            "mangledName": "$s7BabylAI7MessageV4text10senderType10needsAgent12isSentByUser4timeACSS_AA06SenderF0OS2b10Foundation4DateVtcfc",
+            "usr": "s:7BabylAI7MessageV4text10senderType10needsAgent12isSentByUser4time10retryState05errorC0ACSS_AA06SenderF0OS2b10Foundation4DateVAA0c5RetryO0OSSSgtcfc",
+            "mangledName": "$s7BabylAI7MessageV4text10senderType10needsAgent12isSentByUser4time10retryState05errorC0ACSS_AA06SenderF0OS2b10Foundation4DateVAA0c5RetryO0OSSSgtcfc",
             "moduleName": "BabylAI",
             "declAttributes": [
               "AccessControl"
@@ -4732,6 +4858,307 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageRetryState",
+        "printedName": "MessageRetryState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BabylAI.MessageRetryState.Type) -> BabylAI.MessageRetryState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageRetryState",
+                    "printedName": "BabylAI.MessageRetryState",
+                    "usr": "s:7BabylAI17MessageRetryStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BabylAI.MessageRetryState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageRetryState",
+                        "printedName": "BabylAI.MessageRetryState",
+                        "usr": "s:7BabylAI17MessageRetryStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7BabylAI17MessageRetryStateO4noneyA2CmF",
+            "mangledName": "$s7BabylAI17MessageRetryStateO4noneyA2CmF",
+            "moduleName": "BabylAI"
+          },
+          {
+            "kind": "Var",
+            "name": "failed",
+            "printedName": "failed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BabylAI.MessageRetryState.Type) -> BabylAI.MessageRetryState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageRetryState",
+                    "printedName": "BabylAI.MessageRetryState",
+                    "usr": "s:7BabylAI17MessageRetryStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BabylAI.MessageRetryState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageRetryState",
+                        "printedName": "BabylAI.MessageRetryState",
+                        "usr": "s:7BabylAI17MessageRetryStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7BabylAI17MessageRetryStateO6failedyA2CmF",
+            "mangledName": "$s7BabylAI17MessageRetryStateO6failedyA2CmF",
+            "moduleName": "BabylAI"
+          },
+          {
+            "kind": "Var",
+            "name": "retrying",
+            "printedName": "retrying",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BabylAI.MessageRetryState.Type) -> BabylAI.MessageRetryState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageRetryState",
+                    "printedName": "BabylAI.MessageRetryState",
+                    "usr": "s:7BabylAI17MessageRetryStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BabylAI.MessageRetryState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageRetryState",
+                        "printedName": "BabylAI.MessageRetryState",
+                        "usr": "s:7BabylAI17MessageRetryStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7BabylAI17MessageRetryStateO8retryingyA2CmF",
+            "mangledName": "$s7BabylAI17MessageRetryStateO8retryingyA2CmF",
+            "moduleName": "BabylAI"
+          },
+          {
+            "kind": "Var",
+            "name": "sessionCreationFailed",
+            "printedName": "sessionCreationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BabylAI.MessageRetryState.Type) -> BabylAI.MessageRetryState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageRetryState",
+                    "printedName": "BabylAI.MessageRetryState",
+                    "usr": "s:7BabylAI17MessageRetryStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BabylAI.MessageRetryState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageRetryState",
+                        "printedName": "BabylAI.MessageRetryState",
+                        "usr": "s:7BabylAI17MessageRetryStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7BabylAI17MessageRetryStateO21sessionCreationFailedyA2CmF",
+            "mangledName": "$s7BabylAI17MessageRetryStateO21sessionCreationFailedyA2CmF",
+            "moduleName": "BabylAI"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "BabylAI.MessageRetryState?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageRetryState",
+                    "printedName": "BabylAI.MessageRetryState",
+                    "usr": "s:7BabylAI17MessageRetryStateO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7BabylAI17MessageRetryStateO8rawValueACSgSS_tcfc",
+            "mangledName": "$s7BabylAI17MessageRetryStateO8rawValueACSgSS_tcfc",
+            "moduleName": "BabylAI",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BabylAI17MessageRetryStateO8rawValueSSvp",
+            "mangledName": "$s7BabylAI17MessageRetryStateO8rawValueSSvp",
+            "moduleName": "BabylAI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI17MessageRetryStateO8rawValueSSvg",
+                "mangledName": "$s7BabylAI17MessageRetryStateO8rawValueSSvg",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:7BabylAI17MessageRetryStateO",
+        "mangledName": "$s7BabylAI17MessageRetryStateO",
+        "moduleName": "BabylAI",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           }
         ]
       },
@@ -11623,6 +12050,13 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "BabylAI"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -16411,16 +16845,30 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "Array",
-      "offset": 549,
+      "offset": 564,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 589,
+      "offset": 604,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 909,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 952,
+      "length": 1,
+      "value": "1"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/HelpScreenManager.swift",
@@ -16642,161 +17090,189 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "IntegerLiteral",
-      "offset": 9304,
+      "offset": 11060,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 9354,
+      "offset": 11110,
       "length": 15,
       "value": "\"agent_divider\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9403,
+      "offset": 11159,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9424,
+      "offset": 11180,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 9477,
+      "offset": 11247,
       "length": 10,
       "value": "\"thinking\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9518,
+      "offset": 11288,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9539,
+      "offset": 11309,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 9592,
+      "offset": 11376,
       "length": 4,
       "value": "\"Hi\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9633,
+      "offset": 11417,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9654,
+      "offset": 11438,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 9706,
+      "offset": 11504,
       "length": 18,
       "value": "\"Hello from agent\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9758,
+      "offset": 11556,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9779,
+      "offset": 11577,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 9832,
+      "offset": 11644,
       "length": 47,
       "value": "\"Check out this website: https:\/\/www.apple.com\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9910,
+      "offset": 11722,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 9931,
+      "offset": 11743,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 9984,
+      "offset": 11810,
       "length": 62,
       "value": "\"You can also visit https:\/\/developer.apple.com for more info\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 10083,
+      "offset": 11909,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 10104,
+      "offset": 11930,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 10156,
+      "offset": 11996,
       "length": 37,
       "value": "\"Visit https:\/\/google.com for search\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 10224,
+      "offset": 12064,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 10245,
+      "offset": 12085,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
+      "kind": "StringLiteral",
+      "offset": 12186,
+      "length": 16,
+      "value": "\"Failed message\""
+    },
+    {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12239,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12260,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
+      "kind": "StringLiteral",
+      "offset": 12301,
+      "length": 15,
+      "value": "\"Network error\""
+    },
+    {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "IntegerLiteral",
-      "offset": 10283,
+      "offset": 12368,
       "length": 1,
       "value": "8"
     },

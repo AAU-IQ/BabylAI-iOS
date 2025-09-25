@@ -201,11 +201,28 @@ public struct Message : Swift.Identifiable, Swift.Equatable, Swift.Codable {
   public let needsAgent: Swift.Bool
   public let isSentByUser: Swift.Bool
   public let time: Foundation.Date
-  public init(text: Swift.String, senderType: BabylAI.SenderType, needsAgent: Swift.Bool, isSentByUser: Swift.Bool, time: Foundation.Date = Date())
+  public let retryState: BabylAI.MessageRetryState
+  public let errorMessage: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(text: Swift.String, senderType: BabylAI.SenderType, needsAgent: Swift.Bool, isSentByUser: Swift.Bool, time: Foundation.Date = Date(), retryState: BabylAI.MessageRetryState = .none, errorMessage: Swift.String? = nil)
+  #endif
   public static func == (a: BabylAI.Message, b: BabylAI.Message) -> Swift.Bool
   public typealias ID = Foundation.UUID
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+public enum MessageRetryState : Swift.String, Swift.Codable, Swift.Equatable {
+  case none
+  case failed
+  case retrying
+  case sessionCreationFailed
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public struct SenderMessage : Swift.Identifiable, Swift.Codable, Swift.Equatable {
   public let id: Swift.String
@@ -575,6 +592,8 @@ extension BabylAI.BabylAILocale : Swift.Hashable {}
 extension BabylAI.SenderType : Swift.Equatable {}
 extension BabylAI.SenderType : Swift.Hashable {}
 extension BabylAI.SenderType : Swift.RawRepresentable {}
+extension BabylAI.MessageRetryState : Swift.Hashable {}
+extension BabylAI.MessageRetryState : Swift.RawRepresentable {}
 extension BabylAI.CairoFontWeight : Swift.Equatable {}
 extension BabylAI.CairoFontWeight : Swift.Hashable {}
 extension BabylAI.CairoFontWeight : Swift.RawRepresentable {}
