@@ -579,8 +579,8 @@ public enum BabylAITheme : Swift.String {
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor final public func viewerController(theme: BabylAI.BabylAITheme, isDirect: Swift.Bool = false, screenId: Swift.String, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil) -> UIKit.UIViewController
   #endif
-  @_Concurrency.MainActor final public func present(theme: BabylAI.BabylAITheme, from presenter: UIKit.UIViewController, screenId: Swift.String)
-  @_Concurrency.MainActor final public func presentActiveChat(theme: BabylAI.BabylAITheme, from presenter: UIKit.UIViewController, screenId: Swift.String)
+  @_Concurrency.MainActor final public func presentActiveChat(theme: BabylAI.BabylAITheme, screenId: Swift.String)
+  @_Concurrency.MainActor final public func present(theme: BabylAI.BabylAITheme, screenId: Swift.String)
   @objc deinit
 }
 extension BabylAI.BabylAIEnvironment : Swift.Equatable {}

@@ -13132,6 +13132,23 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "BabylAI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "BabylAI"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -15519,6 +15536,13 @@
         "moduleName": "BabylAI"
       },
       {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "BabylAI"
+      },
+      {
         "kind": "TypeDecl",
         "name": "BabylAITheme",
         "printedName": "BabylAITheme",
@@ -16385,8 +16409,8 @@
           },
           {
             "kind": "Function",
-            "name": "present",
-            "printedName": "present(theme:from:screenId:)",
+            "name": "presentActiveChat",
+            "printedName": "presentActiveChat(theme:screenId:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -16401,20 +16425,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "UIViewController",
-                "printedName": "UIKit.UIViewController",
-                "usr": "c:objc(cs)UIViewController"
-              },
-              {
-                "kind": "TypeNominal",
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7BabylAI0A5AISDKC7present5theme4from8screenIdyAA0A7AIThemeO_So16UIViewControllerCSStF",
-            "mangledName": "$s7BabylAI0A5AISDKC7present5theme4from8screenIdyAA0A7AIThemeO_So16UIViewControllerCSStF",
+            "usr": "s:7BabylAI0A5AISDKC17presentActiveChat5theme8screenIdyAA0A7AIThemeO_SStF",
+            "mangledName": "$s7BabylAI0A5AISDKC17presentActiveChat5theme8screenIdyAA0A7AIThemeO_SStF",
             "moduleName": "BabylAI",
             "declAttributes": [
               "Final",
@@ -16426,8 +16444,8 @@
           },
           {
             "kind": "Function",
-            "name": "presentActiveChat",
-            "printedName": "presentActiveChat(theme:from:screenId:)",
+            "name": "present",
+            "printedName": "present(theme:screenId:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -16442,25 +16460,20 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "UIViewController",
-                "printedName": "UIKit.UIViewController",
-                "usr": "c:objc(cs)UIViewController"
-              },
-              {
-                "kind": "TypeNominal",
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7BabylAI0A5AISDKC17presentActiveChat5theme4from8screenIdyAA0A7AIThemeO_So16UIViewControllerCSStF",
-            "mangledName": "$s7BabylAI0A5AISDKC17presentActiveChat5theme4from8screenIdyAA0A7AIThemeO_So16UIViewControllerCSStF",
+            "usr": "s:7BabylAI0A5AISDKC7present5theme8screenIdyAA0A7AIThemeO_SStF",
+            "mangledName": "$s7BabylAI0A5AISDKC7present5theme8screenIdyAA0A7AIThemeO_SStF",
             "moduleName": "BabylAI",
             "declAttributes": [
               "Final",
               "AccessControl",
-              "Custom"
+              "Custom",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           }
@@ -17020,14 +17033,14 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpView.swift",
       "kind": "BooleanLiteral",
-      "offset": 583,
+      "offset": 622,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpView.swift",
       "kind": "BooleanLiteral",
-      "offset": 693,
+      "offset": 732,
       "length": 5,
       "value": "false"
     },
@@ -17391,21 +17404,21 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "StringLiteral",
-      "offset": 507,
+      "offset": 520,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 4336,
+      "offset": 4440,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 6676,
+      "offset": 6780,
       "length": 5,
       "value": "false"
     },
