@@ -16891,13 +16891,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/HelpScreenManager.swift",
-      "kind": "Dictionary",
-      "offset": 579,
-      "length": 3,
-      "value": "[]"
-    },
-    {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Utils\/Codable.swift",
       "kind": "BooleanLiteral",
       "offset": 141,
@@ -17068,28 +17061,28 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/ChatInputView.swift",
       "kind": "StringLiteral",
-      "offset": 2714,
+      "offset": 2713,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/ChatInputView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2780,
+      "offset": 2779,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/ChatInputView.swift",
       "kind": "StringLiteral",
-      "offset": 2800,
+      "offset": 2799,
       "length": 24,
       "value": "\"اكتب رسالة...\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/ChatInputView.swift",
       "kind": "StringLiteral",
-      "offset": 2891,
+      "offset": 2890,
       "length": 4,
       "value": "\"en\""
     },

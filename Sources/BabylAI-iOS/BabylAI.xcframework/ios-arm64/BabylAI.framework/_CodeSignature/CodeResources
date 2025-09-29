@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		oHx6aEhIYUcfqXCbqlON/Wli5QM=
+		cdHj1bZ7KwKeNgp3d+NcabQ6N6o=
 		</data>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		6Fas6NcVA4ktkxcriyr2qL8Xyt8=
+		AKTNVLwwHhw329ox82LlPILy5i4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -182,7 +182,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cigRjTCaYts0s+qNeVa8awUKBsskcWorp7qDHZ3wNJc=
+			KI8jVwIrvUGB+xvfm09DmHXLc03ltIDwPjlld6Ftl58=
 			</data>
 		</dict>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -210,7 +210,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XL67V7pSaTf+x60SrdxpT603AxritSAsHEdubD4h+Do=
+			nJEImkMj0uz26FoFvK7lU8hSKBcygUEZqJ5l1OEVM0U=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
