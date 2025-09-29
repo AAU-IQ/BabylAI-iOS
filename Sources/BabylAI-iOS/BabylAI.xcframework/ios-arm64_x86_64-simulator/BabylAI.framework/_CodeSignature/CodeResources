@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qlWeS5lq2bTowmeTIf9DAYtPMLU=
+		TdEVgHXk/zryerBmVosJvYzRxGs=
 		</data>
 		<key>Modules/BabylAI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Modules/BabylAI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+lJuaXvZ+oHvssNSw4oKdG/LFks=
+		s1WkvxsalCBtSyYfsEfowT4I1TM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -230,7 +230,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RWDQ8e0TudpkvA+O8AYOjREp93UR5+4g02EwFG9TLbE=
+			DtQpC4uW9mwot29w/u+gVRLSl8bc0myoDOJ44xq1f9g=
 			</data>
 		</dict>
 		<key>Modules/BabylAI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -265,7 +265,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2Bt2ZYPHtOJmmxu+ByqIQRiKvkKXcNnBOzT2OlZbdgU=
+			SnFEOBsqT9EHVHKmyjoBiNC7cGElcq+oCLuenoJOYsc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
