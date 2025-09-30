@@ -15945,6 +15945,28 @@
           },
           {
             "kind": "Function",
+            "name": "reset",
+            "printedName": "reset()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7BabylAI0A5AISDKC5resetyyF",
+            "mangledName": "$s7BabylAI0A5AISDKC5resetyyF",
+            "moduleName": "BabylAI",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "setTokenCallback",
             "printedName": "setTokenCallback(_:)",
             "children": [
@@ -17026,14 +17048,14 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpView.swift",
       "kind": "BooleanLiteral",
-      "offset": 622,
+      "offset": 694,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpView.swift",
       "kind": "BooleanLiteral",
-      "offset": 732,
+      "offset": 804,
       "length": 5,
       "value": "false"
     },
@@ -17096,189 +17118,189 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "IntegerLiteral",
-      "offset": 11060,
+      "offset": 11134,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 11110,
+      "offset": 11184,
       "length": 15,
       "value": "\"agent_divider\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 11159,
+      "offset": 11233,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 11180,
+      "offset": 11254,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 11247,
+      "offset": 11321,
       "length": 10,
       "value": "\"thinking\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 11288,
+      "offset": 11362,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 11309,
+      "offset": 11383,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 11376,
+      "offset": 11450,
       "length": 4,
       "value": "\"Hi\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 11417,
+      "offset": 11491,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 11438,
+      "offset": 11512,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 11504,
+      "offset": 11578,
       "length": 18,
       "value": "\"Hello from agent\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 11556,
+      "offset": 11630,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 11577,
+      "offset": 11651,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 11644,
+      "offset": 11718,
       "length": 47,
       "value": "\"Check out this website: https:\/\/www.apple.com\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 11722,
+      "offset": 11796,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 11743,
+      "offset": 11817,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 11810,
+      "offset": 11884,
       "length": 62,
       "value": "\"You can also visit https:\/\/developer.apple.com for more info\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 11909,
+      "offset": 11983,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 11930,
+      "offset": 12004,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 11996,
+      "offset": 12070,
       "length": 37,
       "value": "\"Visit https:\/\/google.com for search\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 12064,
+      "offset": 12138,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 12085,
+      "offset": 12159,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 12186,
+      "offset": 12260,
       "length": 16,
       "value": "\"Failed message\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 12239,
+      "offset": 12313,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "BooleanLiteral",
-      "offset": 12260,
+      "offset": 12334,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "StringLiteral",
-      "offset": 12301,
+      "offset": 12375,
       "length": 15,
       "value": "\"Network error\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/MessageBubble.swift",
       "kind": "IntegerLiteral",
-      "offset": 12368,
+      "offset": 12442,
       "length": 1,
       "value": "8"
     },
@@ -17404,14 +17426,14 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 4440,
+      "offset": 4569,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 6780,
+      "offset": 6909,
       "length": 5,
       "value": "false"
     },

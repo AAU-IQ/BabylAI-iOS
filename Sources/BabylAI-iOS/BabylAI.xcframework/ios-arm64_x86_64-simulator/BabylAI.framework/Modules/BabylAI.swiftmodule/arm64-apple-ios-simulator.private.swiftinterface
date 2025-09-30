@@ -564,6 +564,7 @@ public enum BabylAITheme : Swift.String {
   #if compiler(>=5.3) && $NonescapableTypes
   final public func initialize(with config: BabylAI.EnvironmentConfig, locale: BabylAI.BabylAILocale, userInfo: [Swift.String : Any]? = nil, themeConfig: BabylAI.ThemeConfig? = nil, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil)
   #endif
+  @_Concurrency.MainActor final public func reset()
   final public func setTokenCallback(_ callback: @escaping () async throws -> Swift.String)
   final public func setErrorCallback(_ callback: @escaping (BabylAI.BabylAIError) -> Swift.Void)
   final public func setLocale(_ locale: BabylAI.BabylAILocale)
