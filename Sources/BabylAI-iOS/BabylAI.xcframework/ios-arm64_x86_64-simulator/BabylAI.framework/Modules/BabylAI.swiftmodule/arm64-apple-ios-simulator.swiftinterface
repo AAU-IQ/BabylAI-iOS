@@ -569,6 +569,7 @@ public enum BabylAITheme : Swift.String {
   final public func setErrorCallback(_ callback: @escaping (BabylAI.BabylAIError) -> Swift.Void)
   final public func setLocale(_ locale: BabylAI.BabylAILocale)
   final public func getLocale() -> BabylAI.BabylAILocale
+  @_Concurrency.MainActor final public func configureKeyboardManagerExclusion()
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor final public func makeView(theme: BabylAI.BabylAITheme, userInfo: [Swift.String : Any], screenId: Swift.String, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil) -> some SwiftUICore.View
   

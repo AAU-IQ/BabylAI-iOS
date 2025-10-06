@@ -110,6 +110,67 @@ struct MyApp: App {
 }
 ```
 
+### Keyboard Manager Integration
+
+If your app uses a third-party keyboard manager (like IQKeyboardManager), you should configure it to exclude the BabylAI SDK to prevent conflicts with the SDK's built-in keyboard handling.
+
+#### UIKit AppDelegate Example
+
+```swift
+import UIKit
+import IQKeyboardManagerSwift
+import BabylAI
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // Initialize your keyboard manager
+        IQKeyboardManager.shared.isEnabled = true
+        IQKeyboardManager.shared.enableAutoToolbar = true
+        IQKeyboardManager.shared.resignOnTouchOutside = true
+        
+        // Configure keyboard manager to exclude BabylAI SDK
+        // This prevents conflicts with the SDK's manual keyboard handling
+        BabylAISDK.shared.configureKeyboardManagerExclusion()
+        
+        return true
+    }
+}
+```
+
+#### SwiftUI App Example
+
+```swift
+import SwiftUI
+import IQKeyboardManagerSwift
+import BabylAI
+
+@main
+struct MyApp: App {
+    init() {
+        // Initialize your keyboard manager
+        IQKeyboardManager.shared.isEnabled = true
+        IQKeyboardManager.shared.enableAutoToolbar = true
+        
+        // Configure keyboard manager to exclude BabylAI SDK
+        BabylAISDK.shared.configureKeyboardManagerExclusion()
+        
+        // Initialize BabylAI SDK...
+        // (SDK initialization code here)
+    }
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
+```
+
+> **Note**: Call `configureKeyboardManagerExclusion()` after initializing your keyboard manager in your AppDelegate or App initializer. This ensures the SDK's chat view handles its own keyboard behavior while your app's other screens continue to use the keyboard manager normally.
+
 > ⚠️ **Important**: You must call `BabylAISDK.shared.initialize()` and `BabylAISDK.shared.setTokenCallback()` before using any other BabylAI functionality. Failure to do so will result in authentication errors when trying to launch the chat interface.
 
 ### Environment Configuration
@@ -336,6 +397,7 @@ class ChatViewController: UIViewController {
 - `BabylAISDK.shared.initialize(with: EnvironmentConfig, locale: BabylAILocale, screenId: String, userInfo: [String: Any]? = nil, themeConfig: ThemeConfig? = nil)`: Initialize BabylAI with environment configuration and optional theme customization
 - `BabylAISDK.shared.setTokenCallback(_ callback: @escaping () async throws -> String)`: Set a callback function that will be called when the token needs to be refreshed
 - `BabylAISDK.shared.setErrorCallback(_ callback: @escaping (BabylAIError) -> Void)`: Set a global error callback to handle all SDK errors
+- `BabylAISDK.shared.configureKeyboardManagerExclusion()`: Configures external keyboard managers (if present) to exclude the SDK's view controllers from their handling
 - `BabylAISDK.shared.setLocale(_ locale: BabylAILocale)`: Change the SDK language dynamically without re-initialization
 - `BabylAISDK.shared.getLocale() -> BabylAILocale`: Get the currently selected SDK language
 - `BabylAISDK.shared.viewer(theme: BabylAITheme = .light, isDirect: Bool = false, onMessageReceived: ((String) -> Void)? = nil, onErrorReceived: ((BabylAIError) -> Void)? = nil, onDismiss: (() -> Void)? = nil) -> some View`: Get the BabylAI chat interface as a SwiftUI view

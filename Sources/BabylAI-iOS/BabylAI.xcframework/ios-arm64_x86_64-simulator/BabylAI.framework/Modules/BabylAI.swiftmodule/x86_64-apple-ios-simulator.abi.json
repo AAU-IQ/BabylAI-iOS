@@ -13011,6 +13011,23 @@
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
+        "moduleName": "BabylAI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BabylAI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
         "moduleName": "BabylAI",
         "declAttributes": [
           "RawDocComment"
@@ -13135,10 +13152,7 @@
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
-        "moduleName": "BabylAI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "BabylAI"
       },
       {
         "kind": "Import",
@@ -16096,6 +16110,28 @@
           },
           {
             "kind": "Function",
+            "name": "configureKeyboardManagerExclusion",
+            "printedName": "configureKeyboardManagerExclusion()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7BabylAI0A5AISDKC33configureKeyboardManagerExclusionyyF",
+            "mangledName": "$s7BabylAI0A5AISDKC33configureKeyboardManagerExclusionyyF",
+            "moduleName": "BabylAI",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "makeView",
             "printedName": "makeView(theme:userInfo:screenId:onMessageReceived:onErrorReceived:)",
             "children": [
@@ -16955,6 +16991,20 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Utils\/IQKeyboardManagerCoordinator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 651,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Utils\/IQKeyboardManagerCoordinator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 699,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/ViewModels\/ChatSessionViewModel.swift",
       "kind": "Array",
       "offset": 324,
@@ -17426,14 +17476,14 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 4569,
+      "offset": 4721,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 6909,
+      "offset": 7061,
       "length": 5,
       "value": "false"
     },
