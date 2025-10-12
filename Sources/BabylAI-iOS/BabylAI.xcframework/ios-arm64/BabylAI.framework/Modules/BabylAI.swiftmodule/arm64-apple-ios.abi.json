@@ -13548,6 +13548,127 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BabylAI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AuthTokenInterceptor",
+        "printedName": "AuthTokenInterceptor",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(keychain:clock:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AuthTokenInterceptor",
+                "printedName": "BabylAI.AuthTokenInterceptor",
+                "usr": "s:7BabylAI20AuthTokenInterceptorC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeychainManager",
+                "printedName": "BabylAI.KeychainManager",
+                "hasDefaultArg": true,
+                "usr": "s:7BabylAI15KeychainManagerV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> Swift.Int",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "hasDefaultArg": true
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7BabylAI20AuthTokenInterceptorC8keychain5clockAcA15KeychainManagerV_Siyctcfc",
+            "mangledName": "$s7BabylAI20AuthTokenInterceptorC8keychain5clockAcA15KeychainManagerV_Siyctcfc",
+            "moduleName": "BabylAI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "intercept",
+            "printedName": "intercept(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "paramValueOwnership": "InOut",
+                "usr": "s:10Foundation10URLRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7BabylAI20AuthTokenInterceptorC9interceptyy10Foundation10URLRequestVzYaF",
+            "mangledName": "$s7BabylAI20AuthTokenInterceptorC9interceptyy10Foundation10URLRequestVzYaF",
+            "moduleName": "BabylAI",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:7BabylAI20AuthTokenInterceptorC",
+        "mangledName": "$s7BabylAI20AuthTokenInterceptorC",
+        "moduleName": "BabylAI",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RequestInterceptor",
+            "printedName": "RequestInterceptor",
+            "usr": "s:7BabylAI18RequestInterceptorP",
+            "mangledName": "$s7BabylAI18RequestInterceptorP"
+          }
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "HTTPMethod",
         "printedName": "HTTPMethod",
@@ -13850,7 +13971,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(session:)",
+            "printedName": "init(session:interceptors:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -13864,11 +13985,26 @@
                 "printedName": "Foundation.URLSession",
                 "hasDefaultArg": true,
                 "usr": "c:objc(cs)NSURLSession"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[any BabylAI.RequestInterceptor]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RequestInterceptor",
+                    "printedName": "any BabylAI.RequestInterceptor",
+                    "usr": "s:7BabylAI18RequestInterceptorP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sa"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:7BabylAI13NetworkClientC7sessionACSo12NSURLSessionC_tcfc",
-            "mangledName": "$s7BabylAI13NetworkClientC7sessionACSo12NSURLSessionC_tcfc",
+            "usr": "s:7BabylAI13NetworkClientC7session12interceptorsACSo12NSURLSessionC_SayAA18RequestInterceptor_pGtcfc",
+            "mangledName": "$s7BabylAI13NetworkClientC7session12interceptorsACSo12NSURLSessionC_SayAA18RequestInterceptor_pGtcfc",
             "moduleName": "BabylAI",
             "declAttributes": [
               "AccessControl"
@@ -14685,6 +14821,74 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "BabylAI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RequestInterceptor",
+        "printedName": "RequestInterceptor",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "intercept",
+            "printedName": "intercept(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "paramValueOwnership": "InOut",
+                "usr": "s:10Foundation10URLRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7BabylAI18RequestInterceptorP9interceptyy10Foundation10URLRequestVzYaF",
+            "mangledName": "$s7BabylAI18RequestInterceptorP9interceptyy10Foundation10URLRequestVzYaF",
+            "moduleName": "BabylAI",
+            "genericSig": "<τ_0_0 where τ_0_0 : BabylAI.RequestInterceptor>",
+            "sugared_genericSig": "<Self where Self : BabylAI.RequestInterceptor>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:7BabylAI18RequestInterceptorP",
+        "mangledName": "$s7BabylAI18RequestInterceptorP",
+        "moduleName": "BabylAI",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "BabylAI",
         "declAttributes": [
           "RawDocComment"
@@ -15287,6 +15491,27 @@
         "name": "KeychainManager",
         "printedName": "KeychainManager",
         "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KeychainManager",
+                "printedName": "BabylAI.KeychainManager",
+                "usr": "s:7BabylAI15KeychainManagerV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7BabylAI15KeychainManagerVACycfc",
+            "mangledName": "$s7BabylAI15KeychainManagerVACycfc",
+            "moduleName": "BabylAI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
           {
             "kind": "Function",
             "name": "getAccessToken",
@@ -17404,6 +17629,13 @@
       "value": "50"
     },
     {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Network\/Http\/AuthTokenInterceptor.swift",
+      "kind": "StringLiteral",
+      "offset": 309,
+      "length": 15,
+      "value": "\"Authorization\""
+    },
+    {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Network\/Http\/HTTPMethod.swift",
       "kind": "StringLiteral",
       "offset": 136,
@@ -17476,14 +17708,14 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 4721,
+      "offset": 6274,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/BabylAI.swift",
       "kind": "BooleanLiteral",
-      "offset": 7061,
+      "offset": 8614,
       "length": 5,
       "value": "false"
     },

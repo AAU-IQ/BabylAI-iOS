@@ -448,6 +448,11 @@ public struct MessageUIHelper {
   }
   public typealias Body = @_opaqueReturnTypeOf("$s7BabylAI10ThemedViewV4bodyQrvp", 0) __<Content>
 }
+final public class AuthTokenInterceptor : BabylAI.RequestInterceptor {
+  public init(keychain: BabylAI.KeychainManager = KeychainManager(), clock: @escaping () -> Swift.Int = { Int(Date().timeIntervalSince1970) })
+  final public func intercept(_ request: inout Foundation.URLRequest) async
+  @objc deinit
+}
 public enum HTTPMethod : Swift.String {
   case get
   case post
@@ -462,7 +467,7 @@ public enum HTTPMethod : Swift.String {
   }
 }
 final public class NetworkClient {
-  public init(session: Foundation.URLSession = .shared)
+  public init(session: Foundation.URLSession = .shared, interceptors: [any BabylAI.RequestInterceptor] = [AuthTokenInterceptor()])
   #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   final public func request<T>(_ request: BabylAI.NetworkRequest, responseType: T.Type? = nil) async throws -> T? where T : Swift.Decodable
@@ -490,6 +495,9 @@ public struct NetworkRequest {
   #if compiler(>=5.3) && $NonescapableTypes
   public init(endpoint: any BabylAI.EndpointPath, method: BabylAI.HTTPMethod = .get, headers: [Swift.String : Swift.String] = [:], body: Foundation.Data? = nil)
   #endif
+}
+public protocol RequestInterceptor {
+  func intercept(_ request: inout Foundation.URLRequest) async
 }
 public protocol EndpointPath {
   var fullPath: Swift.String { get }
@@ -528,6 +536,7 @@ public enum Endpoints {
   }
 }
 public struct KeychainManager {
+  public init()
   #if compiler(>=5.3) && $NonescapableTypes
   public func getAccessToken() async -> Swift.String?
   #endif
