@@ -290,14 +290,12 @@ public struct HelpScreen : Swift.Codable, Swift.Equatable {
 public struct Option : Swift.Codable, Swift.Equatable, Swift.Identifiable {
   public let id: Swift.String
   public let helpScreenId: Swift.String
-  public let parentOptionId: Swift.String?
   public let assistant: BabylAI.Assistant?
   public let title: Swift.String
   public let paragraphs: [Swift.String]
-  public let files: [Swift.String]?
   public let chatWithUs: Swift.Bool?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(id: Swift.String, helpScreenId: Swift.String, parentOptionId: Swift.String? = nil, assistant: BabylAI.Assistant? = nil, title: Swift.String, paragraphs: [Swift.String], files: [Swift.String]? = nil, chatWithUs: Swift.Bool? = nil)
+  public init(id: Swift.String, helpScreenId: Swift.String, assistant: BabylAI.Assistant? = nil, title: Swift.String, paragraphs: [Swift.String], chatWithUs: Swift.Bool? = nil)
   #endif
   public static func == (a: BabylAI.Option, b: BabylAI.Option) -> Swift.Bool
   public typealias ID = Swift.String

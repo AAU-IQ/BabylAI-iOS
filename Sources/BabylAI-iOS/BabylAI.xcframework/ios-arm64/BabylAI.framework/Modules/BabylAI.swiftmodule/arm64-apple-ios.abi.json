@@ -7811,66 +7811,6 @@
           },
           {
             "kind": "Var",
-            "name": "parentOptionId",
-            "printedName": "parentOptionId",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:7BabylAI6OptionV06parentC2IdSSSgvp",
-            "mangledName": "$s7BabylAI6OptionV06parentC2IdSSSgvp",
-            "moduleName": "BabylAI",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7BabylAI6OptionV06parentC2IdSSSgvg",
-                "mangledName": "$s7BabylAI6OptionV06parentC2IdSSSgvg",
-                "moduleName": "BabylAI",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "assistant",
             "printedName": "assistant",
             "children": [
@@ -8035,82 +7975,6 @@
           },
           {
             "kind": "Var",
-            "name": "files",
-            "printedName": "files",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:7BabylAI6OptionV5filesSaySSGSgvp",
-            "mangledName": "$s7BabylAI6OptionV5filesSaySSGSgvp",
-            "moduleName": "BabylAI",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7BabylAI6OptionV5filesSaySSGSgvg",
-                "mangledName": "$s7BabylAI6OptionV5filesSaySSGSgvg",
-                "moduleName": "BabylAI",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "chatWithUs",
             "printedName": "chatWithUs",
             "children": [
@@ -8135,8 +7999,7 @@
             "moduleName": "BabylAI",
             "declAttributes": [
               "HasStorage",
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -8173,7 +8036,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(id:helpScreenId:parentOptionId:assistant:title:paragraphs:files:chatWithUs:)",
+            "printedName": "init(id:helpScreenId:assistant:title:paragraphs:chatWithUs:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -8192,21 +8055,6 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -8246,29 +8094,6 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "[Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
                 "printedName": "Swift.Bool?",
                 "children": [
                   {
@@ -8283,8 +8108,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:7BabylAI6OptionV2id12helpScreenId06parentcG09assistant5title10paragraphs5files10chatWithUsACSS_S2SSgAA9AssistantVSgSSSaySSGAPSgSbSgtcfc",
-            "mangledName": "$s7BabylAI6OptionV2id12helpScreenId06parentcG09assistant5title10paragraphs5files10chatWithUsACSS_S2SSgAA9AssistantVSgSSSaySSGAPSgSbSgtcfc",
+            "usr": "s:7BabylAI6OptionV2id12helpScreenId9assistant5title10paragraphs10chatWithUsACSS_SSAA9AssistantVSgSSSaySSGSbSgtcfc",
+            "mangledName": "$s7BabylAI6OptionV2id12helpScreenId9assistant5title10paragraphs10chatWithUsACSS_SSAA9AssistantVSgSSSaySSGSbSgtcfc",
             "moduleName": "BabylAI",
             "declAttributes": [
               "AccessControl"
@@ -17295,28 +17120,28 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpOptionView.swift",
       "kind": "StringLiteral",
-      "offset": 3357,
+      "offset": 3328,
       "length": 63,
       "value": "\"كيف يمكنني تغيير عنوةاً في حسابي؟\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpOptionView.swift",
       "kind": "Array",
-      "offset": 3442,
+      "offset": 3413,
       "length": 161,
       "value": "[\"يمكنك السؤال الزيد الاعلى عن هذا السؤال في السوالات المميزة.\", \"هناك المزيد من المساعدة\"]"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpOptionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3645,
+      "offset": 3596,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpOptionView.swift",
       "kind": "StringLiteral",
-      "offset": 3678,
+      "offset": 3629,
       "length": 16,
       "value": "\"Button clicked\""
     },
