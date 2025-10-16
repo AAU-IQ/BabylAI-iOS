@@ -17106,42 +17106,42 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpOptionView.swift",
       "kind": "StringLiteral",
-      "offset": 3250,
+      "offset": 3506,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpOptionView.swift",
       "kind": "StringLiteral",
-      "offset": 3277,
+      "offset": 3533,
       "length": 10,
       "value": "\"screen_1\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpOptionView.swift",
       "kind": "StringLiteral",
-      "offset": 3328,
+      "offset": 3584,
       "length": 63,
       "value": "\"كيف يمكنني تغيير عنوةاً في حسابي؟\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpOptionView.swift",
       "kind": "Array",
-      "offset": 3413,
+      "offset": 3669,
       "length": 161,
       "value": "[\"يمكنك السؤال الزيد الاعلى عن هذا السؤال في السوالات المميزة.\", \"هناك المزيد من المساعدة\"]"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpOptionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3596,
+      "offset": 3852,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpOptionView.swift",
       "kind": "StringLiteral",
-      "offset": 3629,
+      "offset": 3885,
       "length": 16,
       "value": "\"Button clicked\""
     },
