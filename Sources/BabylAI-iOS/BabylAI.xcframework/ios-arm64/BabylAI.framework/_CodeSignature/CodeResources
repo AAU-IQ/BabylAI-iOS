@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		K7qNg58NZAqVoS4pLielwpegNWw=
+		a2SzUt5yI1Hi1BoJV4gunT4VIvo=
 		</data>
 		<key>Cairo-Black.ttf</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		WOP14hXvn3Pjr93PuxIGjLYYWds=
+		BXbawEsbrPLHgdkTfMOa7uOrrf0=
 		</data>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		ZyC9i0OPuWgrLSMNy10i2NLQkH0=
+		piS1FVVy1KcOvl4HFFsBIGhCDRg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -105,7 +105,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tfzzi7Z5r6IJnyow6CPRr7HX1j9N3zKhuG3QTw/OjRA=
+			5obypzEhpMR5GM2i5Bx4zOY/lo+ZSnmkNGFJ+AQuXe8=
 			</data>
 		</dict>
 		<key>Cairo-Black.ttf</key>
@@ -182,7 +182,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ioVSrZ17OUILqS/Hmh6AtJmNbuIeYKe+nsqKQlGZOCw=
+			4wdBF+HdOuvb5+mA019uHKhkC0lEilUnVtUeHdYMCF0=
 			</data>
 		</dict>
 		<key>Modules/BabylAI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -210,7 +210,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MlBpETFPx4klSKgnSC/TG5rzpPO/xW3o+qgMvXZV6yg=
+			ZCk4NxTcJ/5zzPfTFJQDROGZ79N6hc2Ns4kyS6qMthk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
