@@ -290,49 +290,21 @@ public struct SenderMessage : Swift.Identifiable, Swift.Codable, Swift.Equatable
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct ApiKey : Swift.Codable, Swift.Equatable {
-  public let id: Swift.String
-  public let key: Swift.String
-  public let name: Swift.String
-  public let isDevelopment: Swift.Bool
-  public let usageCount: Swift.Int
-  public let quota: Swift.Int
-  public let allowedDomains: [Swift.String]
-  public let allowedIPs: [Swift.String]
-  public let allowedBundleIds: [Swift.String]
-  public let allowedAndroidKeys: [Swift.String]
-  public let active: Swift.Bool
-  public init(id: Swift.String, key: Swift.String, name: Swift.String, isDevelopment: Swift.Bool, usageCount: Swift.Int, quota: Swift.Int, allowedDomains: [Swift.String], allowedIPs: [Swift.String], allowedBundleIds: [Swift.String], allowedAndroidKeys: [Swift.String], active: Swift.Bool)
-  public static func == (a: BabylAI.ApiKey, b: BabylAI.ApiKey) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
 public struct Assistant : Swift.Codable, Swift.Equatable {
-  public let id: Swift.String
-  public let tenantId: Swift.String
-  public let tenant: BabylAI.Tenant?
-  public let name: Swift.String
-  public let openAIAssistantId: Swift.String?
-  public let greeting: Swift.String?
-  public let closing: Swift.String?
-  public let limit: Swift.Int?
-  public let status: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(id: Swift.String, tenantId: Swift.String, tenant: BabylAI.Tenant? = nil, name: Swift.String, openAIAssistantId: Swift.String? = nil, greeting: Swift.String? = nil, closing: Swift.String? = nil, limit: Swift.Int? = nil, status: Swift.String? = nil)
-  #endif
+  public let greeting: Swift.String
+  public let closing: Swift.String
+  public init(greeting: Swift.String, closing: Swift.String)
   public static func == (a: BabylAI.Assistant, b: BabylAI.Assistant) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct HelpScreen : Swift.Codable, Swift.Equatable {
-  public let id: Swift.String
-  public let tenantId: Swift.String
   public let title: Swift.String
   public let description: Swift.String?
   public let chatWithUs: Swift.Bool?
   public let options: [BabylAI.Option]?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(id: Swift.String, tenantId: Swift.String, title: Swift.String, description: Swift.String? = nil, chatWithUs: Swift.Bool? = nil, options: [BabylAI.Option]? = nil)
+  public init(title: Swift.String, description: Swift.String? = nil, chatWithUs: Swift.Bool? = nil, options: [BabylAI.Option]? = nil)
   #endif
   public static func == (a: BabylAI.HelpScreen, b: BabylAI.HelpScreen) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
@@ -363,49 +335,13 @@ public struct RootSession : Swift.Codable, Swift.Equatable {
 }
 public struct Session : Swift.Codable, Swift.Equatable {
   public let id: Swift.String
-  public let customerId: Swift.String
-  public let assignedAgentId: Swift.String?
-  public let jumpedInByAgentId: Swift.String?
   public let tenantId: Swift.String
-  public let assistantId: Swift.String?
-  public let threadId: Swift.String?
-  public let helpScreenId: Swift.String?
-  public let helpScreen: BabylAI.HelpScreen?
   public let optionId: Swift.String?
-  public let option: BabylAI.Option?
-  public let status: Swift.Int
-  public let createdAt: Swift.String
-  public let closedAt: Swift.String?
-  public let closedByUserId: Swift.String?
-  public let lastMessageAt: Swift.String
-  public let unreadAgentMessages: Swift.Int
-  public let unreadCustomerMessages: Swift.Int
-  public let lastMessageContent: Swift.String?
-  public let escalatedAt: Swift.String?
-  public let assignedAt: Swift.String?
-  public let jumpedInAt: Swift.String?
-  public let channel: Swift.Int?
-  public let externalId: Swift.String?
-  public let tags: [Swift.String]?
-  public let tenant: BabylAI.Tenant?
-  public let assistant: BabylAI.Assistant?
   public let messages: [BabylAI.SenderMessage]
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(id: Swift.String, customerId: Swift.String, assignedAgentId: Swift.String? = nil, jumpedInByAgentId: Swift.String? = nil, tenantId: Swift.String, assistantId: Swift.String? = nil, threadId: Swift.String? = nil, helpScreenId: Swift.String? = nil, helpScreen: BabylAI.HelpScreen? = nil, optionId: Swift.String? = nil, option: BabylAI.Option? = nil, status: Swift.Int, createdAt: Swift.String, closedAt: Swift.String? = nil, closedByUserId: Swift.String? = nil, lastMessageAt: Swift.String, unreadAgentMessages: Swift.Int, unreadCustomerMessages: Swift.Int, lastMessageContent: Swift.String? = nil, escalatedAt: Swift.String? = nil, assignedAt: Swift.String? = nil, jumpedInAt: Swift.String? = nil, channel: Swift.Int? = nil, externalId: Swift.String? = nil, tags: [Swift.String]? = nil, tenant: BabylAI.Tenant? = nil, assistant: BabylAI.Assistant? = nil, messages: [BabylAI.SenderMessage])
+  public init(id: Swift.String, tenantId: Swift.String, optionId: Swift.String? = nil, messages: [BabylAI.SenderMessage])
   #endif
   public static func == (a: BabylAI.Session, b: BabylAI.Session) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct Tenant : Swift.Codable, Swift.Equatable {
-  public let id: Swift.String
-  public let name: Swift.String
-  public let key: Swift.String
-  public let apiKeys: [BabylAI.ApiKey]?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(id: Swift.String, name: Swift.String, key: Swift.String, apiKeys: [BabylAI.ApiKey]? = nil)
-  #endif
-  public static func == (a: BabylAI.Tenant, b: BabylAI.Tenant) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
