@@ -97,11 +97,12 @@ public struct ThemeConfig {
   public let primaryColorDark: UIKit.UIColor?
   public let secondaryColorDark: UIKit.UIColor?
   public let headerLogo: UIKit.UIImage?
+  public let logoSymbol: UIKit.UIImage?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(primaryColor: UIKit.UIColor? = nil, secondaryColor: UIKit.UIColor? = nil, primaryColorDark: UIKit.UIColor? = nil, secondaryColorDark: UIKit.UIColor? = nil, headerLogo: UIKit.UIImage? = nil)
+  public init(primaryColor: UIKit.UIColor? = nil, secondaryColor: UIKit.UIColor? = nil, primaryColorDark: UIKit.UIColor? = nil, secondaryColorDark: UIKit.UIColor? = nil, headerLogo: UIKit.UIImage? = nil, logoSymbol: UIKit.UIImage? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(primaryColorHex: Swift.String? = nil, secondaryColorHex: Swift.String? = nil, primaryColorDarkHex: Swift.String? = nil, secondaryColorDarkHex: Swift.String? = nil, headerLogo: UIKit.UIImage? = nil)
+  public init(primaryColorHex: Swift.String? = nil, secondaryColorHex: Swift.String? = nil, primaryColorDarkHex: Swift.String? = nil, secondaryColorDarkHex: Swift.String? = nil, headerLogo: UIKit.UIImage? = nil, logoSymbol: UIKit.UIImage? = nil)
   #endif
 }
 @_Concurrency.MainActor @preconcurrency public struct ThemedColorReader<Content> : SwiftUICore.View where Content : SwiftUICore.View {

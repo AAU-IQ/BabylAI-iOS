@@ -74,7 +74,8 @@ struct MyApp: App {
                 secondaryColorHex: "#D4AF37",         // Sophisticated gold for light theme
                 primaryColorDarkHex: "#81C784",       // Soft sage green for dark theme
                 secondaryColorDarkHex: "#F9D71C",     // Warm amber for dark theme
-                headerLogo: UIImage(named: "your_custom_logo") // Optional: Your brand logo
+                headerLogo: UIImage(named: "your_custom_logo"), // Optional: Your brand logo
+                logoSymbol: UIImage(named: "your_logo_icon")    // Optional: Small icon for chat avatars
             ),
             onMessageReceived: { message in
                 // Optional: Handle global incoming messages
@@ -415,8 +416,8 @@ class ChatViewController: UIViewController {
 
 - `BabylAITheme.light`: Light theme
 - `BabylAITheme.dark`: Dark theme
-- `ThemeConfig(primaryColor, secondaryColor, primaryColorDark, secondaryColorDark, headerLogo)`: Comprehensive theme customization with separate light/dark colors and custom logo support
-- `ThemeConfig(primaryColorHex, secondaryColorHex, primaryColorDarkHex, secondaryColorDarkHex, headerLogo)`: Convenience initializer using hex color strings
+- `ThemeConfig(primaryColor, secondaryColor, primaryColorDark, secondaryColorDark, headerLogo, logoSymbol)`: Comprehensive theme customization with separate light/dark colors and custom logo support
+- `ThemeConfig(primaryColorHex, secondaryColorHex, primaryColorDarkHex, secondaryColorDarkHex, headerLogo, logoSymbol)`: Convenience initializer using hex color strings
 
 #### Locale Configuration
 
