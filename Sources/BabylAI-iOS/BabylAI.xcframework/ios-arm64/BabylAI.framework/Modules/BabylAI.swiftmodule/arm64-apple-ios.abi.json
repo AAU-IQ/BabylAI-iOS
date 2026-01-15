@@ -2442,6 +2442,277 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "BabylAI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AblyMessageActionType",
+        "printedName": "AblyMessageActionType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "needsAgent",
+            "printedName": "needsAgent",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BabylAI.AblyMessageActionType.Type) -> BabylAI.AblyMessageActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AblyMessageActionType",
+                    "printedName": "BabylAI.AblyMessageActionType",
+                    "usr": "s:7BabylAI21AblyMessageActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BabylAI.AblyMessageActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AblyMessageActionType",
+                        "printedName": "BabylAI.AblyMessageActionType",
+                        "usr": "s:7BabylAI21AblyMessageActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7BabylAI21AblyMessageActionTypeO10needsAgentyA2CmF",
+            "mangledName": "$s7BabylAI21AblyMessageActionTypeO10needsAgentyA2CmF",
+            "moduleName": "BabylAI"
+          },
+          {
+            "kind": "Var",
+            "name": "endSession",
+            "printedName": "endSession",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BabylAI.AblyMessageActionType.Type) -> BabylAI.AblyMessageActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AblyMessageActionType",
+                    "printedName": "BabylAI.AblyMessageActionType",
+                    "usr": "s:7BabylAI21AblyMessageActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BabylAI.AblyMessageActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AblyMessageActionType",
+                        "printedName": "BabylAI.AblyMessageActionType",
+                        "usr": "s:7BabylAI21AblyMessageActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7BabylAI21AblyMessageActionTypeO10endSessionyA2CmF",
+            "mangledName": "$s7BabylAI21AblyMessageActionTypeO10endSessionyA2CmF",
+            "moduleName": "BabylAI"
+          },
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BabylAI.AblyMessageActionType.Type) -> BabylAI.AblyMessageActionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AblyMessageActionType",
+                    "printedName": "BabylAI.AblyMessageActionType",
+                    "usr": "s:7BabylAI21AblyMessageActionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BabylAI.AblyMessageActionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AblyMessageActionType",
+                        "printedName": "BabylAI.AblyMessageActionType",
+                        "usr": "s:7BabylAI21AblyMessageActionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7BabylAI21AblyMessageActionTypeO4noneyA2CmF",
+            "mangledName": "$s7BabylAI21AblyMessageActionTypeO4noneyA2CmF",
+            "moduleName": "BabylAI"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "BabylAI.AblyMessageActionType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AblyMessageActionType",
+                    "printedName": "BabylAI.AblyMessageActionType",
+                    "usr": "s:7BabylAI21AblyMessageActionTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7BabylAI21AblyMessageActionTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s7BabylAI21AblyMessageActionTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "BabylAI",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BabylAI21AblyMessageActionTypeO8rawValueSSvp",
+            "mangledName": "$s7BabylAI21AblyMessageActionTypeO8rawValueSSvp",
+            "moduleName": "BabylAI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI21AblyMessageActionTypeO8rawValueSSvg",
+                "mangledName": "$s7BabylAI21AblyMessageActionTypeO8rawValueSSvg",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:7BabylAI21AblyMessageActionTypeO",
+        "mangledName": "$s7BabylAI21AblyMessageActionTypeO",
+        "moduleName": "BabylAI",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "BabylAI",
         "declAttributes": [
           "RawDocComment"
@@ -9761,6 +10032,159 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "onSessionEnded",
+            "printedName": "onSessionEnded",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BabylAI11AblyServiceC14onSessionEndedyycSgvp",
+            "mangledName": "$s7BabylAI11AblyServiceC14onSessionEndedyycSgvp",
+            "moduleName": "BabylAI",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI11AblyServiceC14onSessionEndedyycSgvg",
+                "mangledName": "$s7BabylAI11AblyServiceC14onSessionEndedyycSgvg",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI11AblyServiceC14onSessionEndedyycSgvs",
+                "mangledName": "$s7BabylAI11AblyServiceC14onSessionEndedyycSgvs",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI11AblyServiceC14onSessionEndedyycSgvM",
+                "mangledName": "$s7BabylAI11AblyServiceC14onSessionEndedyycSgvM",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -15456,6 +15880,27 @@
       "value": "\"#807239A6\""
     },
     {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Enums\/AblyMessageActionTypeEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 94,
+      "length": 13,
+      "value": "\"needs_agent\""
+    },
+    {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Enums\/AblyMessageActionTypeEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 130,
+      "length": 13,
+      "value": "\"end_session\""
+    },
+    {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Enums\/AblyMessageActionTypeEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 160,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Enums\/SenderType.swift",
       "kind": "IntegerLiteral",
       "offset": 175,
@@ -15535,28 +15980,28 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "Array",
-      "offset": 2535,
+      "offset": 2645,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "Array",
-      "offset": 7151,
+      "offset": 7261,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "Array",
-      "offset": 9169,
+      "offset": 9279,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "Array",
-      "offset": 12334,
+      "offset": 12444,
       "length": 2,
       "value": "[]"
     },
@@ -15955,56 +16400,35 @@
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
       "kind": "BooleanLiteral",
-      "offset": 12237,
+      "offset": 12615,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
       "kind": "IntegerLiteral",
-      "offset": 14001,
+      "offset": 14379,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
       "kind": "StringLiteral",
-      "offset": 14106,
+      "offset": 14484,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
       "kind": "BooleanLiteral",
-      "offset": 14171,
+      "offset": 14549,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
       "kind": "BooleanLiteral",
-      "offset": 14208,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 14250,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
-      "kind": "StringLiteral",
-      "offset": 14526,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 14591,
+      "offset": 14586,
       "length": 5,
       "value": "false"
     },
@@ -16012,27 +16436,48 @@
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
       "kind": "BooleanLiteral",
       "offset": 14628,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 14670,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
       "kind": "StringLiteral",
-      "offset": 14789,
+      "offset": 14904,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 14969,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 15006,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 15048,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
+      "kind": "StringLiteral",
+      "offset": 15167,
       "length": 16,
       "value": "\"Great service!\""
     },
     {
       "filePath": "\/Users\/ahmedraad\/Desktop\/asl\/babyl-sdks\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Reusable\/FeedbackView.swift",
       "kind": "FloatLiteral",
-      "offset": 15031,
+      "offset": 15409,
       "length": 3,
       "value": "0.1"
     },

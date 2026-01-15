@@ -129,6 +129,18 @@ public func themedAgentBubble(themeConfig: BabylAI.ThemeConfig?, colorScheme: Sw
 #if compiler(>=5.3) && $NonescapableTypes
 public func themedAiBubble(themeConfig: BabylAI.ThemeConfig?, colorScheme: SwiftUICore.ColorScheme) -> SwiftUICore.Color
 #endif
+public enum AblyMessageActionType : Swift.String, Swift.Codable {
+  case needsAgent
+  case endSession
+  case none
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public enum BabylAIError : Swift.Error, Foundation.LocalizedError {
   case networkError(code: Swift.Int, message: Swift.String)
   case connectionTimeout
@@ -351,6 +363,7 @@ final public class AblyService {
   final public var onError: ((Swift.String) -> Swift.Void)?
   final public var onConnectionStarted: (() -> Swift.Void)?
   final public var onConnectionTerminated: (() -> Swift.Void)?
+  final public var onSessionEnded: (() -> Swift.Void)?
   public init()
   final public func initializeConnection(ablyToken: Swift.String)
   final public func startConnection()
@@ -601,6 +614,9 @@ extension BabylAI.BabylAIEnvironment : Swift.Equatable {}
 extension BabylAI.BabylAIEnvironment : Swift.Hashable {}
 extension BabylAI.BabylAIEnvironment : Swift.RawRepresentable {}
 extension BabylAI.ThemedColorReader : Swift.Sendable {}
+extension BabylAI.AblyMessageActionType : Swift.Equatable {}
+extension BabylAI.AblyMessageActionType : Swift.Hashable {}
+extension BabylAI.AblyMessageActionType : Swift.RawRepresentable {}
 extension BabylAI.FeedbackRating : Swift.Hashable {}
 extension BabylAI.FeedbackRating : Swift.RawRepresentable {}
 extension BabylAI.FeedbackState : Swift.Hashable {}
