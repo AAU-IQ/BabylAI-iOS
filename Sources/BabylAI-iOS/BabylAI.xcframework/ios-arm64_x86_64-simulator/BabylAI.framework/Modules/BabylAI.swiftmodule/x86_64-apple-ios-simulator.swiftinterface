@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BabylAI
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import AVFoundation
 @_exported import BabylAI
 import Combine
@@ -239,6 +239,7 @@ public enum SenderType : Swift.Int, Swift.Codable {
   case customer
   case agent
   case ai
+  case system
   public var iconName: Swift.String {
     get
   }
@@ -304,9 +305,12 @@ public struct SenderMessage : Swift.Identifiable, Swift.Codable, Swift.Equatable
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct Assistant : Swift.Codable, Swift.Equatable {
+  public let name: Swift.String?
   public let greeting: Swift.String
   public let closing: Swift.String
-  public init(greeting: Swift.String, closing: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(name: Swift.String? = nil, greeting: Swift.String, closing: Swift.String)
+  #endif
   public static func == (a: BabylAI.Assistant, b: BabylAI.Assistant) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -360,6 +364,7 @@ public struct Session : Swift.Codable, Swift.Equatable {
 }
 final public class AblyService {
   final public var onMessageReceived: ((BabylAI.Message) -> Swift.Void)?
+  final public var onAgentJoined: ((Swift.String) -> Swift.Void)?
   final public var onError: ((Swift.String) -> Swift.Void)?
   final public var onConnectionStarted: (() -> Swift.Void)?
   final public var onConnectionTerminated: (() -> Swift.Void)?
