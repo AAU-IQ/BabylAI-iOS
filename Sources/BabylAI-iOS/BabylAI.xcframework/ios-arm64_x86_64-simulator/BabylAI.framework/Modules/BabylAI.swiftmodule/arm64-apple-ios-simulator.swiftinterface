@@ -227,6 +227,17 @@ public enum FeedbackState : Swift.String, Swift.Codable, Swift.Equatable {
     get
   }
 }
+public enum HelpScreenType : Swift.Int, Swift.Codable, Swift.Equatable {
+  case optionsMenu
+  case directAssistant
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 public enum BabylAILocale {
   case arabic, english
   public static func == (a: BabylAI.BabylAILocale, b: BabylAI.BabylAILocale) -> Swift.Bool
@@ -320,12 +331,15 @@ public struct HelpScreen : Swift.Codable, Swift.Equatable {
   public let description: Swift.String?
   public let chatWithUs: Swift.Bool?
   public let options: [BabylAI.Option]?
+  public let type: BabylAI.HelpScreenType
+  public let assistantId: Swift.String?
+  public let assistant: BabylAI.Assistant?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(title: Swift.String, description: Swift.String? = nil, chatWithUs: Swift.Bool? = nil, options: [BabylAI.Option]? = nil)
+  public init(title: Swift.String, description: Swift.String? = nil, chatWithUs: Swift.Bool? = nil, options: [BabylAI.Option]? = nil, type: BabylAI.HelpScreenType = .optionsMenu, assistantId: Swift.String? = nil, assistant: BabylAI.Assistant? = nil)
   #endif
+  public init(from decoder: any Swift.Decoder) throws
   public static func == (a: BabylAI.HelpScreen, b: BabylAI.HelpScreen) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Option : Swift.Codable, Swift.Equatable, Swift.Identifiable {
   public let id: Swift.String
@@ -626,6 +640,8 @@ extension BabylAI.FeedbackRating : Swift.Hashable {}
 extension BabylAI.FeedbackRating : Swift.RawRepresentable {}
 extension BabylAI.FeedbackState : Swift.Hashable {}
 extension BabylAI.FeedbackState : Swift.RawRepresentable {}
+extension BabylAI.HelpScreenType : Swift.Hashable {}
+extension BabylAI.HelpScreenType : Swift.RawRepresentable {}
 extension BabylAI.BabylAILocale : Swift.Equatable {}
 extension BabylAI.BabylAILocale : Swift.Hashable {}
 extension BabylAI.SenderType : Swift.Equatable {}

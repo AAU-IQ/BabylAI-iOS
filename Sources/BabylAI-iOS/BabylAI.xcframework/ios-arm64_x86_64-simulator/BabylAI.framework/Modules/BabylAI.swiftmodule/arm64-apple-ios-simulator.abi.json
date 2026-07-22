@@ -5024,6 +5024,244 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BabylAI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HelpScreenType",
+        "printedName": "HelpScreenType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "optionsMenu",
+            "printedName": "optionsMenu",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BabylAI.HelpScreenType.Type) -> BabylAI.HelpScreenType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HelpScreenType",
+                    "printedName": "BabylAI.HelpScreenType",
+                    "usr": "s:7BabylAI14HelpScreenTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BabylAI.HelpScreenType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HelpScreenType",
+                        "printedName": "BabylAI.HelpScreenType",
+                        "usr": "s:7BabylAI14HelpScreenTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7BabylAI14HelpScreenTypeO11optionsMenuyA2CmF",
+            "mangledName": "$s7BabylAI14HelpScreenTypeO11optionsMenuyA2CmF",
+            "moduleName": "BabylAI"
+          },
+          {
+            "kind": "Var",
+            "name": "directAssistant",
+            "printedName": "directAssistant",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BabylAI.HelpScreenType.Type) -> BabylAI.HelpScreenType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HelpScreenType",
+                    "printedName": "BabylAI.HelpScreenType",
+                    "usr": "s:7BabylAI14HelpScreenTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BabylAI.HelpScreenType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HelpScreenType",
+                        "printedName": "BabylAI.HelpScreenType",
+                        "usr": "s:7BabylAI14HelpScreenTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7BabylAI14HelpScreenTypeO15directAssistantyA2CmF",
+            "mangledName": "$s7BabylAI14HelpScreenTypeO15directAssistantyA2CmF",
+            "moduleName": "BabylAI"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "BabylAI.HelpScreenType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HelpScreenType",
+                    "printedName": "BabylAI.HelpScreenType",
+                    "usr": "s:7BabylAI14HelpScreenTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7BabylAI14HelpScreenTypeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s7BabylAI14HelpScreenTypeO8rawValueACSgSi_tcfc",
+            "moduleName": "BabylAI",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BabylAI14HelpScreenTypeO8rawValueSivp",
+            "mangledName": "$s7BabylAI14HelpScreenTypeO8rawValueSivp",
+            "moduleName": "BabylAI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI14HelpScreenTypeO8rawValueSivg",
+                "mangledName": "$s7BabylAI14HelpScreenTypeO8rawValueSivg",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:7BabylAI14HelpScreenTypeO",
+        "mangledName": "$s7BabylAI14HelpScreenTypeO",
+        "moduleName": "BabylAI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "BabylAILocale",
         "printedName": "BabylAILocale",
@@ -7811,6 +8049,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BabylAI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "HelpScreen",
         "printedName": "HelpScreen",
@@ -8056,9 +8304,176 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "type",
+            "printedName": "type",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HelpScreenType",
+                "printedName": "BabylAI.HelpScreenType",
+                "usr": "s:7BabylAI14HelpScreenTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BabylAI10HelpScreenV4typeAA0cD4TypeOvp",
+            "mangledName": "$s7BabylAI10HelpScreenV4typeAA0cD4TypeOvp",
+            "moduleName": "BabylAI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HelpScreenType",
+                    "printedName": "BabylAI.HelpScreenType",
+                    "usr": "s:7BabylAI14HelpScreenTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI10HelpScreenV4typeAA0cD4TypeOvg",
+                "mangledName": "$s7BabylAI10HelpScreenV4typeAA0cD4TypeOvg",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "assistantId",
+            "printedName": "assistantId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BabylAI10HelpScreenV11assistantIdSSSgvp",
+            "mangledName": "$s7BabylAI10HelpScreenV11assistantIdSSSgvp",
+            "moduleName": "BabylAI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI10HelpScreenV11assistantIdSSSgvg",
+                "mangledName": "$s7BabylAI10HelpScreenV11assistantIdSSSgvg",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "assistant",
+            "printedName": "assistant",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "BabylAI.Assistant?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Assistant",
+                    "printedName": "BabylAI.Assistant",
+                    "usr": "s:7BabylAI9AssistantV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BabylAI10HelpScreenV9assistantAA9AssistantVSgvp",
+            "mangledName": "$s7BabylAI10HelpScreenV9assistantAA9AssistantVSgvp",
+            "moduleName": "BabylAI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "BabylAI.Assistant?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Assistant",
+                        "printedName": "BabylAI.Assistant",
+                        "usr": "s:7BabylAI9AssistantV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BabylAI10HelpScreenV9assistantAA9AssistantVSgvg",
+                "mangledName": "$s7BabylAI10HelpScreenV9assistantAA9AssistantVSgvg",
+                "moduleName": "BabylAI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(title:description:chatWithUs:options:)",
+            "printedName": "init(title:description:chatWithUs:options:type:assistantId:assistant:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -8124,11 +8539,48 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HelpScreenType",
+                "printedName": "BabylAI.HelpScreenType",
+                "hasDefaultArg": true,
+                "usr": "s:7BabylAI14HelpScreenTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "BabylAI.Assistant?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Assistant",
+                    "printedName": "BabylAI.Assistant",
+                    "usr": "s:7BabylAI9AssistantV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:7BabylAI10HelpScreenV5title11description10chatWithUs7optionsACSS_SSSgSbSgSayAA6OptionVGSgtcfc",
-            "mangledName": "$s7BabylAI10HelpScreenV5title11description10chatWithUs7optionsACSS_SSSgSbSgSayAA6OptionVGSgtcfc",
+            "usr": "s:7BabylAI10HelpScreenV5title11description10chatWithUs7options4type11assistantId0L0ACSS_SSSgSbSgSayAA6OptionVGSgAA0cD4TypeOAkA9AssistantVSgtcfc",
+            "mangledName": "$s7BabylAI10HelpScreenV5title11description10chatWithUs7options4type11assistantId0L0ACSS_SSSgSbSgSayAA6OptionVGSgAA0cD4TypeOAkA9AssistantVSgtcfc",
             "moduleName": "BabylAI",
             "declAttributes": [
               "AccessControl"
@@ -8157,7 +8609,9 @@
             "usr": "s:7BabylAI10HelpScreenV4fromACs7Decoder_p_tKcfc",
             "mangledName": "$s7BabylAI10HelpScreenV4fromACs7Decoder_p_tKcfc",
             "moduleName": "BabylAI",
-            "implicit": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
             "throwing": true,
             "init_kind": "Designated"
           },
@@ -16182,6 +16636,20 @@
       "value": "\"\""
     },
     {
+      "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Enums\/HelpScreenType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 512,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Enums\/HelpScreenType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 541,
+      "length": 1,
+      "value": "1"
+    },
+    {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Enums\/SenderType.swift",
       "kind": "IntegerLiteral",
       "offset": 175,
@@ -16268,42 +16736,42 @@
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 978,
+      "offset": 984,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1021,
+      "offset": 1027,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "Array",
-      "offset": 2762,
+      "offset": 2754,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "Array",
-      "offset": 7378,
+      "offset": 7370,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "Array",
-      "offset": 9396,
+      "offset": 9388,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Services\/ChatSessionManager.swift",
       "kind": "Array",
-      "offset": 12561,
+      "offset": 12700,
       "length": 2,
       "value": "[]"
     },
@@ -16408,63 +16876,63 @@
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/ViewModels\/ChatSessionViewModel.swift",
       "kind": "Array",
-      "offset": 1468,
+      "offset": 1452,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/ViewModels\/ChatSessionViewModel.swift",
       "kind": "Array",
-      "offset": 1795,
+      "offset": 1779,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/ViewModels\/ChatSessionViewModel.swift",
       "kind": "Array",
-      "offset": 2112,
+      "offset": 2096,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Chat Views\/ChatView.swift",
       "kind": "StringLiteral",
-      "offset": 3015,
+      "offset": 2951,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Chat Views\/ChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3281,
+      "offset": 3217,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Chat Views\/ChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3335,
+      "offset": 3271,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Chat Views\/ChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3395,
+      "offset": 3331,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Chat Views\/ChatView.swift",
       "kind": "Array",
-      "offset": 3452,
+      "offset": 3388,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Chat Views\/ChatView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3503,
+      "offset": 3439,
       "length": 5,
       "value": "false"
     },
@@ -16534,7 +17002,7 @@
     {
       "filePath": "\/Users\/abd\/AAU\/babylai-ios-sdk\/BabylAI\/Sources\/Core\/Views\/Help Screen Views\/HelpView.swift",
       "kind": "BooleanLiteral",
-      "offset": 850,
+      "offset": 856,
       "length": 5,
       "value": "false"
     },
