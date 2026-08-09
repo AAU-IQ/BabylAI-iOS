@@ -6,10 +6,12 @@ import AVFoundation
 @_exported import BabylAI
 import Combine
 import CoreText
+import CryptoKit
 import DeveloperToolsSupport
 import Foundation
 import Photos
 import PhotosUI
+import QuickLook
 import Security
 import Swift
 import SwiftUI
@@ -17,6 +19,7 @@ import UIKit
 import UniformTypeIdentifiers
 import _Concurrency
 import _PhotosUI_SwiftUI
+import _QuickLook_SwiftUI
 import _StringProcessing
 import _SwiftConcurrencyShims
 public enum BabylAIEnvironment : Swift.String, Swift.CaseIterable {
@@ -262,6 +265,32 @@ public enum SenderType : Swift.Int, Swift.Codable {
     get
   }
 }
+public enum AttachmentUploadState : Swift.Equatable {
+  case pending
+  case uploading
+  case uploaded
+  case failed
+  public static func == (a: BabylAI.AttachmentUploadState, b: BabylAI.AttachmentUploadState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct FileAttachment : Swift.Identifiable, Swift.Equatable {
+  public let id: Foundation.UUID
+  public let name: Swift.String
+  public let sizeBytes: Swift.Int64
+  public let contentType: Swift.String
+  public let localURL: Foundation.URL?
+  public let remoteURL: Swift.String?
+  public let uploadState: BabylAI.AttachmentUploadState
+  public let uploadedId: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(id: Foundation.UUID = UUID(), name: Swift.String, sizeBytes: Swift.Int64, contentType: Swift.String, localURL: Foundation.URL? = nil, remoteURL: Swift.String? = nil, uploadState: BabylAI.AttachmentUploadState = .pending, uploadedId: Swift.String? = nil)
+  #endif
+  public static func == (a: BabylAI.FileAttachment, b: BabylAI.FileAttachment) -> Swift.Bool
+  public typealias ID = Foundation.UUID
+}
 public struct Message : Swift.Identifiable, Swift.Equatable {
   public let id: Foundation.UUID
   public let text: Swift.String
@@ -277,8 +306,9 @@ public struct Message : Swift.Identifiable, Swift.Equatable {
   public let feedbackNote: Swift.String?
   public let images: [UIKit.UIImage]
   public let isUploadingImages: Swift.Bool
+  public let fileAttachments: [BabylAI.FileAttachment]
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(text: Swift.String, senderType: BabylAI.SenderType, needsAgent: Swift.Bool, isSentByUser: Swift.Bool, time: Foundation.Date = Date(), retryState: BabylAI.MessageRetryState = .none, errorMessage: Swift.String? = nil, isFeedbackMessage: Swift.Bool = false, feedbackState: BabylAI.FeedbackState = .none, feedbackRating: BabylAI.FeedbackRating? = nil, feedbackNote: Swift.String? = nil, images: [UIKit.UIImage] = [], isUploadingImages: Swift.Bool = false)
+  public init(text: Swift.String, senderType: BabylAI.SenderType, needsAgent: Swift.Bool, isSentByUser: Swift.Bool, time: Foundation.Date = Date(), retryState: BabylAI.MessageRetryState = .none, errorMessage: Swift.String? = nil, isFeedbackMessage: Swift.Bool = false, feedbackState: BabylAI.FeedbackState = .none, feedbackRating: BabylAI.FeedbackRating? = nil, feedbackNote: Swift.String? = nil, images: [UIKit.UIImage] = [], isUploadingImages: Swift.Bool = false, fileAttachments: [BabylAI.FileAttachment] = [])
   #endif
   public func getAvailableRatings() -> [BabylAI.FeedbackRating]
   public func shouldShowFeedbackForm() -> Swift.Bool
@@ -326,6 +356,28 @@ public struct Assistant : Swift.Codable, Swift.Equatable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct AttachmentTypeRule : Swift.Codable, Swift.Equatable {
+  public let contentType: Swift.String
+  public let maxBytes: Swift.Int64?
+  public let extensions: [Swift.String]?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(contentType: Swift.String, maxBytes: Swift.Int64? = nil, extensions: [Swift.String]? = nil)
+  #endif
+  public static func == (a: BabylAI.AttachmentTypeRule, b: BabylAI.AttachmentTypeRule) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct AttachmentSettings : Swift.Codable, Swift.Equatable {
+  public let enabled: Swift.Bool?
+  public let maxAllowedFiles: Swift.Int?
+  public let allowList: [BabylAI.AttachmentTypeRule]?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(enabled: Swift.Bool? = nil, maxAllowedFiles: Swift.Int? = nil, allowList: [BabylAI.AttachmentTypeRule]? = nil)
+  #endif
+  public static func == (a: BabylAI.AttachmentSettings, b: BabylAI.AttachmentSettings) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct HelpScreen : Swift.Codable, Swift.Equatable {
   public let title: Swift.String
   public let description: Swift.String?
@@ -334,8 +386,9 @@ public struct HelpScreen : Swift.Codable, Swift.Equatable {
   public let type: BabylAI.HelpScreenType
   public let assistantId: Swift.String?
   public let assistant: BabylAI.Assistant?
+  public let attachmentSettings: BabylAI.AttachmentSettings?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(title: Swift.String, description: Swift.String? = nil, chatWithUs: Swift.Bool? = nil, options: [BabylAI.Option]? = nil, type: BabylAI.HelpScreenType = .optionsMenu, assistantId: Swift.String? = nil, assistant: BabylAI.Assistant? = nil)
+  public init(title: Swift.String, description: Swift.String? = nil, chatWithUs: Swift.Bool? = nil, options: [BabylAI.Option]? = nil, type: BabylAI.HelpScreenType = .optionsMenu, assistantId: Swift.String? = nil, assistant: BabylAI.Assistant? = nil, attachmentSettings: BabylAI.AttachmentSettings? = nil)
   #endif
   public init(from decoder: any Swift.Decoder) throws
   public static func == (a: BabylAI.HelpScreen, b: BabylAI.HelpScreen) -> Swift.Bool
@@ -647,6 +700,7 @@ extension BabylAI.BabylAILocale : Swift.Hashable {}
 extension BabylAI.SenderType : Swift.Equatable {}
 extension BabylAI.SenderType : Swift.Hashable {}
 extension BabylAI.SenderType : Swift.RawRepresentable {}
+extension BabylAI.AttachmentUploadState : Swift.Hashable {}
 extension BabylAI.MessageRetryState : Swift.Hashable {}
 extension BabylAI.MessageRetryState : Swift.RawRepresentable {}
 extension BabylAI.CairoFontWeight : Swift.Equatable {}
