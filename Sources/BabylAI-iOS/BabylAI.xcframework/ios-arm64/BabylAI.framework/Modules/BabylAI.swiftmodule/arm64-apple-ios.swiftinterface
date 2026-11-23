@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BabylAI
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+// swift-compiler-version: Apple Swift version 6.4.2 effective-5.10 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -language-mode 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BabylAI
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4.2
 import AVFoundation
 @_exported import BabylAI
 import Combine
@@ -22,134 +22,116 @@ import _PhotosUI_SwiftUI
 import _QuickLook_SwiftUI
 import _StringProcessing
 import _SwiftConcurrencyShims
-public enum BabylAIEnvironment : Swift.String, Swift.CaseIterable {
+public enum BabylAIEnvironment : Swift::String, Swift::CaseIterable {
   case production
   case development
-  public var displayName: Swift.String {
+  case staging
+  public var displayName: Swift::String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias AllCases = [BabylAI.BabylAIEnvironment]
-  public typealias RawValue = Swift.String
-  nonisolated public static var allCases: [BabylAI.BabylAIEnvironment] {
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [BabylAI::BabylAIEnvironment]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [BabylAI::BabylAIEnvironment] {
     get
   }
-  public var rawValue: Swift.String {
+  public var rawValue: Swift::String {
     get
   }
 }
 public struct EnvironmentConfig {
-  public let environment: BabylAI.BabylAIEnvironment
-  public let enableLogging: Swift.Bool
-  public let connectionTimeout: Swift.Int
-  public let receiveTimeout: Swift.Int
-  public var baseUrl: Swift.String {
+  public let environment: BabylAI::BabylAIEnvironment
+  public let enableLogging: Swift::Bool
+  public let connectionTimeout: Swift::Int
+  public let receiveTimeout: Swift::Int
+  public var baseUrl: Swift::String {
     get
   }
-  public var isTestingMode: Swift.Bool {
+  public var isTestingMode: Swift::Bool {
     get
   }
-  public var isProduction: Swift.Bool {
+  public var isProduction: Swift::Bool {
     get
   }
-  public var shouldEnableLogging: Swift.Bool {
+  public var shouldEnableLogging: Swift::Bool {
     get
   }
-  public init(environment: BabylAI.BabylAIEnvironment, enableLogging: Swift.Bool = true, connectionTimeout: Swift.Int = 30_000, receiveTimeout: Swift.Int = 15_000)
-  public static func production(enableLogging: Swift.Bool = false, connectionTimeout: Swift.Int = 30_000, receiveTimeout: Swift.Int = 15_000) -> BabylAI.EnvironmentConfig
-  public static func development(enableLogging: Swift.Bool = true, connectionTimeout: Swift.Int = 30_000, receiveTimeout: Swift.Int = 15_000) -> BabylAI.EnvironmentConfig
+  public init(environment: BabylAI::BabylAIEnvironment, enableLogging: Swift::Bool = true, connectionTimeout: Swift::Int = 30_000, receiveTimeout: Swift::Int = 15_000)
+  public static func production(enableLogging: Swift::Bool = false, connectionTimeout: Swift::Int = 30_000, receiveTimeout: Swift::Int = 15_000) -> BabylAI::EnvironmentConfig
+  public static func development(enableLogging: Swift::Bool = true, connectionTimeout: Swift::Int = 30_000, receiveTimeout: Swift::Int = 15_000) -> BabylAI::EnvironmentConfig
+  public static func staging(enableLogging: Swift::Bool = true, connectionTimeout: Swift::Int = 30_000, receiveTimeout: Swift::Int = 15_000) -> BabylAI::EnvironmentConfig
 }
-extension BabylAI.EnvironmentConfig : Swift.CustomStringConvertible {
-  public var description: Swift.String {
+extension BabylAI::EnvironmentConfig : Swift::CustomStringConvertible {
+  public var description: Swift::String {
     get
   }
 }
 public enum EnvironmentService {
-  public static func initialize(_ config: BabylAI.EnvironmentConfig)
-  public static var isInitialized: Swift.Bool {
+  public static func initialize(_ config: BabylAI::EnvironmentConfig)
+  public static var isInitialized: Swift::Bool {
     get
   }
-  public static var config: BabylAI.EnvironmentConfig {
+  public static var config: BabylAI::EnvironmentConfig {
     get
   }
-  public static var baseUrl: Swift.String {
+  public static var baseUrl: Swift::String {
     get
   }
-  public static var shouldEnableLogging: Swift.Bool {
+  public static var shouldEnableLogging: Swift::Bool {
     get
   }
-  public static var isTestingMode: Swift.Bool {
+  public static var isTestingMode: Swift::Bool {
     get
   }
-  public static var isProduction: Swift.Bool {
+  public static var isProduction: Swift::Bool {
     get
   }
-  public static var connectionTimeout: Swift.Int {
+  public static var connectionTimeout: Swift::Int {
     get
   }
-  public static var receiveTimeout: Swift.Int {
+  public static var receiveTimeout: Swift::Int {
     get
   }
   public static func reset()
 }
 public struct ThemeConfig {
-  public let primaryColor: UIKit.UIColor?
-  public let secondaryColor: UIKit.UIColor?
-  public let primaryColorDark: UIKit.UIColor?
-  public let secondaryColorDark: UIKit.UIColor?
-  public let headerLogo: UIKit.UIImage?
-  public let logoSymbol: UIKit.UIImage?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(primaryColor: UIKit.UIColor? = nil, secondaryColor: UIKit.UIColor? = nil, primaryColorDark: UIKit.UIColor? = nil, secondaryColorDark: UIKit.UIColor? = nil, headerLogo: UIKit.UIImage? = nil, logoSymbol: UIKit.UIImage? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(primaryColorHex: Swift.String? = nil, secondaryColorHex: Swift.String? = nil, primaryColorDarkHex: Swift.String? = nil, secondaryColorDarkHex: Swift.String? = nil, headerLogo: UIKit.UIImage? = nil, logoSymbol: UIKit.UIImage? = nil)
-  #endif
+  public let primaryColor: UIKit::UIColor?
+  public let secondaryColor: UIKit::UIColor?
+  public let primaryColorDark: UIKit::UIColor?
+  public let secondaryColorDark: UIKit::UIColor?
+  public let headerLogo: UIKit::UIImage?
+  public let logoSymbol: UIKit::UIImage?
+  public init(primaryColor: UIKit::UIColor? = nil, secondaryColor: UIKit::UIColor? = nil, primaryColorDark: UIKit::UIColor? = nil, secondaryColorDark: UIKit::UIColor? = nil, headerLogo: UIKit::UIImage? = nil, logoSymbol: UIKit::UIImage? = nil)
+  public init(primaryColorHex: Swift::String? = nil, secondaryColorHex: Swift::String? = nil, primaryColorDarkHex: Swift::String? = nil, secondaryColorDarkHex: Swift::String? = nil, headerLogo: UIKit::UIImage? = nil, logoSymbol: UIKit::UIImage? = nil)
 }
-@_Concurrency.MainActor @preconcurrency public struct ThemedColorReader<Content> : SwiftUICore.View where Content : SwiftUICore.View {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public init(@SwiftUICore.ViewBuilder content: @escaping (BabylAI.ThemeConfig?, SwiftUICore.ColorScheme) -> Content)
-  #endif
-  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+@_Concurrency::MainActor @preconcurrency public struct ThemedColorReader<Content> : SwiftUICore::View where Content : SwiftUICore::View {
+  @_Concurrency::MainActor @preconcurrency public init(@SwiftUICore::ViewBuilder content: @escaping (BabylAI::ThemeConfig?, SwiftUICore::ColorScheme) -> Content)
+  @_Concurrency::MainActor @preconcurrency public var body: some SwiftUICore::View {
     get
   }
   public typealias Body = @_opaqueReturnTypeOf("$s7BabylAI17ThemedColorReaderV4bodyQrvp", 0) __<Content>
 }
-#if compiler(>=5.3) && $NonescapableTypes
-public func themedMainColor(themeConfig: BabylAI.ThemeConfig?, colorScheme: SwiftUICore.ColorScheme) -> SwiftUICore.Color
-#endif
-#if compiler(>=5.3) && $NonescapableTypes
-public func themedPrimaryContainer(themeConfig: BabylAI.ThemeConfig?, colorScheme: SwiftUICore.ColorScheme) -> SwiftUICore.Color
-#endif
-#if compiler(>=5.3) && $NonescapableTypes
-public func themedCustomerBubble(themeConfig: BabylAI.ThemeConfig?, colorScheme: SwiftUICore.ColorScheme) -> SwiftUICore.Color
-#endif
-#if compiler(>=5.3) && $NonescapableTypes
-public func themedAgentBubble(themeConfig: BabylAI.ThemeConfig?, colorScheme: SwiftUICore.ColorScheme) -> SwiftUICore.Color
-#endif
-#if compiler(>=5.3) && $NonescapableTypes
-public func themedAiBubble(themeConfig: BabylAI.ThemeConfig?, colorScheme: SwiftUICore.ColorScheme) -> SwiftUICore.Color
-#endif
-public enum AblyMessageActionType : Swift.String, Swift.Codable {
+public func themedMainColor(themeConfig: BabylAI::ThemeConfig?, colorScheme: SwiftUICore::ColorScheme) -> SwiftUICore::Color
+public func themedPrimaryContainer(themeConfig: BabylAI::ThemeConfig?, colorScheme: SwiftUICore::ColorScheme) -> SwiftUICore::Color
+public func themedCustomerBubble(themeConfig: BabylAI::ThemeConfig?, colorScheme: SwiftUICore::ColorScheme) -> SwiftUICore::Color
+public func themedAgentBubble(themeConfig: BabylAI::ThemeConfig?, colorScheme: SwiftUICore::ColorScheme) -> SwiftUICore::Color
+public func themedAiBubble(themeConfig: BabylAI::ThemeConfig?, colorScheme: SwiftUICore::ColorScheme) -> SwiftUICore::Color
+public enum AblyMessageActionType : Swift::String, Swift::Codable {
   case needsAgent
   case endSession
   case none
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
-public enum BabylAIError : Swift.Error, Foundation.LocalizedError {
-  case networkError(code: Swift.Int, message: Swift.String)
+public enum BabylAIError : Swift::Error, Foundation::LocalizedError {
+  case networkError(code: Swift::Int, message: Swift::String)
   case connectionTimeout
   case serverUnavailable
   case invalidResponse
-  case requestFailed(statusCode: Swift.Int)
+  case requestFailed(statusCode: Swift::Int)
   case authenticationFailed
   case tokenExpired
   case invalidToken
@@ -157,9 +139,9 @@ public enum BabylAIError : Swift.Error, Foundation.LocalizedError {
   case unauthorizedAccess
   case sdkNotInitialized
   case invalidConfiguration
-  case missingRequiredParameter(Swift.String)
+  case missingRequiredParameter(Swift::String)
   case invalidEnvironment
-  case missingPrivacyPermission(Swift.String)
+  case missingPrivacyPermission(Swift::String)
   case dataParsingError
   case invalidDataFormat
   case dataNotFound
@@ -168,281 +150,249 @@ public enum BabylAIError : Swift.Error, Foundation.LocalizedError {
   case viewPresentationFailed
   case themeConfigurationError
   case localizationError
-  case systemError(Swift.String)
+  case systemError(Swift::String)
   case memoryError
   case fileSystemError
-  case unknownError(Swift.String)
-  public var errorCode: Swift.String {
+  case unknownError(Swift::String)
+  public var errorCode: Swift::String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
-  public var errorDescription: Swift.String? {
+  public var errorDescription: Swift::String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public var recoverySuggestion: Swift.String? {
+  public var recoverySuggestion: Swift::String? {
     get
   }
-  #endif
-  public var logEntry: [Swift.String : Any] {
+  public var logEntry: [Swift::String : Any] {
     get
   }
-  public var userFriendlyMessage: Swift.String {
+  public var userFriendlyMessage: Swift::String {
     get
   }
 }
-public enum FeedbackRating : Swift.String, Swift.Codable, Swift.Equatable, Swift.CaseIterable {
+public enum FeedbackRating : Swift::String, Swift::Codable, Swift::Equatable, Swift::CaseIterable {
   case excellent
   case good
   case fair
   case poor
   case average
   case okay
-  public var value: Swift.Float {
+  public var value: Swift::Float {
     get
   }
-  public var displayText: Swift.String {
+  public var displayText: Swift::String {
     get
   }
-  public static func options(for state: BabylAI.FeedbackState) -> [BabylAI.FeedbackRating]
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias AllCases = [BabylAI.FeedbackRating]
-  public typealias RawValue = Swift.String
-  nonisolated public static var allCases: [BabylAI.FeedbackRating] {
+  public static func options(for state: BabylAI::FeedbackState) -> [BabylAI::FeedbackRating]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [BabylAI::FeedbackRating]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [BabylAI::FeedbackRating] {
     get
   }
-  public var rawValue: Swift.String {
+  public var rawValue: Swift::String {
     get
   }
 }
-public enum FeedbackState : Swift.String, Swift.Codable, Swift.Equatable {
+public enum FeedbackState : Swift::String, Swift::Codable, Swift::Equatable {
   case none
   case liked
   case disliked
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
-public enum HelpScreenType : Swift.Int, Swift.Codable, Swift.Equatable {
+public enum HelpScreenType : Swift::Int, Swift::Codable, Swift::Equatable {
   case optionsMenu
   case directAssistant
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.Int)
-  #endif
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
     get
   }
 }
 public enum BabylAILocale {
   case arabic, english
-  public static func == (a: BabylAI.BabylAILocale, b: BabylAI.BabylAILocale) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public static func == (a: BabylAI::BabylAILocale, b: BabylAI::BabylAILocale) -> Swift::Bool
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
     get
   }
 }
-public enum SenderType : Swift.Int, Swift.Codable {
+public enum SenderType : Swift::Int, Swift::Codable {
   case customer
   case agent
   case ai
   case system
-  public var iconName: Swift.String {
+  public var iconName: Swift::String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.Int)
-  #endif
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
     get
   }
 }
-public enum AttachmentUploadState : Swift.Equatable {
+public enum AttachmentUploadState : Swift::Equatable {
   case pending
   case uploading
   case uploaded
   case failed
-  public static func == (a: BabylAI.AttachmentUploadState, b: BabylAI.AttachmentUploadState) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public static func == (a: BabylAI::AttachmentUploadState, b: BabylAI::AttachmentUploadState) -> Swift::Bool
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
     get
   }
 }
-public struct FileAttachment : Swift.Identifiable, Swift.Equatable {
-  public let id: Foundation.UUID
-  public let name: Swift.String
-  public let sizeBytes: Swift.Int64
-  public let contentType: Swift.String
-  public let localURL: Foundation.URL?
-  public let remoteURL: Swift.String?
-  public let uploadState: BabylAI.AttachmentUploadState
-  public let uploadedId: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(id: Foundation.UUID = UUID(), name: Swift.String, sizeBytes: Swift.Int64, contentType: Swift.String, localURL: Foundation.URL? = nil, remoteURL: Swift.String? = nil, uploadState: BabylAI.AttachmentUploadState = .pending, uploadedId: Swift.String? = nil)
-  #endif
-  public static func == (a: BabylAI.FileAttachment, b: BabylAI.FileAttachment) -> Swift.Bool
-  public typealias ID = Foundation.UUID
+public struct FileAttachment : Swift::Identifiable, Swift::Equatable {
+  public let id: Foundation::UUID
+  public let name: Swift::String
+  public let sizeBytes: Swift::Int64
+  public let contentType: Swift::String
+  public let localURL: Foundation::URL?
+  public let remoteURL: Swift::String?
+  public let uploadState: BabylAI::AttachmentUploadState
+  public let uploadedId: Swift::String?
+  public init(id: Foundation::UUID = UUID(), name: Swift::String, sizeBytes: Swift::Int64, contentType: Swift::String, localURL: Foundation::URL? = nil, remoteURL: Swift::String? = nil, uploadState: BabylAI::AttachmentUploadState = .pending, uploadedId: Swift::String? = nil)
+  public static func == (a: BabylAI::FileAttachment, b: BabylAI::FileAttachment) -> Swift::Bool
+  public typealias ID = Foundation::UUID
 }
-public struct Message : Swift.Identifiable, Swift.Equatable {
-  public let id: Foundation.UUID
-  public let text: Swift.String
-  public let senderType: BabylAI.SenderType
-  public let needsAgent: Swift.Bool
-  public let isSentByUser: Swift.Bool
-  public let time: Foundation.Date
-  public let retryState: BabylAI.MessageRetryState
-  public let errorMessage: Swift.String?
-  public let isFeedbackMessage: Swift.Bool
-  public let feedbackState: BabylAI.FeedbackState
-  public let feedbackRating: BabylAI.FeedbackRating?
-  public let feedbackNote: Swift.String?
-  public let images: [UIKit.UIImage]
-  public let isUploadingImages: Swift.Bool
-  public let fileAttachments: [BabylAI.FileAttachment]
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(text: Swift.String, senderType: BabylAI.SenderType, needsAgent: Swift.Bool, isSentByUser: Swift.Bool, time: Foundation.Date = Date(), retryState: BabylAI.MessageRetryState = .none, errorMessage: Swift.String? = nil, isFeedbackMessage: Swift.Bool = false, feedbackState: BabylAI.FeedbackState = .none, feedbackRating: BabylAI.FeedbackRating? = nil, feedbackNote: Swift.String? = nil, images: [UIKit.UIImage] = [], isUploadingImages: Swift.Bool = false, fileAttachments: [BabylAI.FileAttachment] = [])
-  #endif
-  public func getAvailableRatings() -> [BabylAI.FeedbackRating]
-  public func shouldShowFeedbackForm() -> Swift.Bool
-  public func withUploadComplete() -> BabylAI.Message
-  public static func == (lhs: BabylAI.Message, rhs: BabylAI.Message) -> Swift.Bool
-  public typealias ID = Foundation.UUID
+public struct Message : Swift::Identifiable, Swift::Equatable {
+  public let id: Foundation::UUID
+  public let text: Swift::String
+  public let senderType: BabylAI::SenderType
+  public let needsAgent: Swift::Bool
+  public let isSentByUser: Swift::Bool
+  public let time: Foundation::Date
+  public let retryState: BabylAI::MessageRetryState
+  public let errorMessage: Swift::String?
+  public let isFeedbackMessage: Swift::Bool
+  public let feedbackState: BabylAI::FeedbackState
+  public let feedbackRating: BabylAI::FeedbackRating?
+  public let feedbackNote: Swift::String?
+  public let images: [UIKit::UIImage]
+  public let isUploadingImages: Swift::Bool
+  public let fileAttachments: [BabylAI::FileAttachment]
+  public init(text: Swift::String, senderType: BabylAI::SenderType, needsAgent: Swift::Bool, isSentByUser: Swift::Bool, time: Foundation::Date = Date(), retryState: BabylAI::MessageRetryState = .none, errorMessage: Swift::String? = nil, isFeedbackMessage: Swift::Bool = false, feedbackState: BabylAI::FeedbackState = .none, feedbackRating: BabylAI::FeedbackRating? = nil, feedbackNote: Swift::String? = nil, images: [UIKit::UIImage] = [], isUploadingImages: Swift::Bool = false, fileAttachments: [BabylAI::FileAttachment] = [])
+  public func getAvailableRatings() -> [BabylAI::FeedbackRating]
+  public func shouldShowFeedbackForm() -> Swift::Bool
+  public func withUploadComplete() -> BabylAI::Message
+  public static func == (lhs: BabylAI::Message, rhs: BabylAI::Message) -> Swift::Bool
+  public typealias ID = Foundation::UUID
 }
-public enum MessageRetryState : Swift.String, Swift.Codable, Swift.Equatable {
+public enum MessageRetryState : Swift::String, Swift::Codable, Swift::Equatable {
   case none
   case failed
   case retrying
   case sessionCreationFailed
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
-public struct SenderMessage : Swift.Identifiable, Swift.Codable, Swift.Equatable {
-  public let id: Swift.String
-  public let chatSessionId: Swift.String
-  public let senderId: Swift.String?
-  public let senderType: Swift.Int
-  public let messageContent: Swift.String
-  public let isSeen: Swift.Bool
-  public let isAIResponse: Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(id: Swift.String, chatSessionId: Swift.String, senderId: Swift.String? = nil, senderType: Swift.Int, messageContent: Swift.String, isSeen: Swift.Bool, isAIResponse: Swift.Bool)
-  #endif
-  public static func == (a: BabylAI.SenderMessage, b: BabylAI.SenderMessage) -> Swift.Bool
-  public typealias ID = Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct SenderMessage : Swift::Identifiable, Swift::Codable, Swift::Equatable {
+  public let id: Swift::String
+  public let chatSessionId: Swift::String
+  public let senderId: Swift::String?
+  public let senderType: Swift::Int
+  public let messageContent: Swift::String
+  public let isSeen: Swift::Bool
+  public let isAIResponse: Swift::Bool
+  public init(id: Swift::String, chatSessionId: Swift::String, senderId: Swift::String? = nil, senderType: Swift::Int, messageContent: Swift::String, isSeen: Swift::Bool, isAIResponse: Swift::Bool)
+  public static func == (a: BabylAI::SenderMessage, b: BabylAI::SenderMessage) -> Swift::Bool
+  public typealias ID = Swift::String
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct Assistant : Swift.Codable, Swift.Equatable {
-  public let name: Swift.String?
-  public let greeting: Swift.String
-  public let closing: Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(name: Swift.String? = nil, greeting: Swift.String, closing: Swift.String)
-  #endif
-  public static func == (a: BabylAI.Assistant, b: BabylAI.Assistant) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct Assistant : Swift::Codable, Swift::Equatable {
+  public let name: Swift::String?
+  public let greeting: Swift::String
+  public let closing: Swift::String
+  public init(name: Swift::String? = nil, greeting: Swift::String, closing: Swift::String)
+  public static func == (a: BabylAI::Assistant, b: BabylAI::Assistant) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct AttachmentTypeRule : Swift.Codable, Swift.Equatable {
-  public let contentType: Swift.String
-  public let maxBytes: Swift.Int64?
-  public let extensions: [Swift.String]?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(contentType: Swift.String, maxBytes: Swift.Int64? = nil, extensions: [Swift.String]? = nil)
-  #endif
-  public static func == (a: BabylAI.AttachmentTypeRule, b: BabylAI.AttachmentTypeRule) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct AttachmentTypeRule : Swift::Codable, Swift::Equatable {
+  public let contentType: Swift::String
+  public let maxBytes: Swift::Int64?
+  public let extensions: [Swift::String]?
+  public init(contentType: Swift::String, maxBytes: Swift::Int64? = nil, extensions: [Swift::String]? = nil)
+  public static func == (a: BabylAI::AttachmentTypeRule, b: BabylAI::AttachmentTypeRule) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct AttachmentSettings : Swift.Codable, Swift.Equatable {
-  public let enabled: Swift.Bool?
-  public let maxAllowedFiles: Swift.Int?
-  public let allowList: [BabylAI.AttachmentTypeRule]?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(enabled: Swift.Bool? = nil, maxAllowedFiles: Swift.Int? = nil, allowList: [BabylAI.AttachmentTypeRule]? = nil)
-  #endif
-  public static func == (a: BabylAI.AttachmentSettings, b: BabylAI.AttachmentSettings) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct AttachmentSettings : Swift::Codable, Swift::Equatable {
+  public let enabled: Swift::Bool?
+  public let maxAllowedFiles: Swift::Int?
+  public let allowList: [BabylAI::AttachmentTypeRule]?
+  public init(enabled: Swift::Bool? = nil, maxAllowedFiles: Swift::Int? = nil, allowList: [BabylAI::AttachmentTypeRule]? = nil)
+  public static func == (a: BabylAI::AttachmentSettings, b: BabylAI::AttachmentSettings) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct HelpScreen : Swift.Codable, Swift.Equatable {
-  public let title: Swift.String
-  public let description: Swift.String?
-  public let chatWithUs: Swift.Bool?
-  public let options: [BabylAI.Option]?
-  public let type: BabylAI.HelpScreenType
-  public let assistantId: Swift.String?
-  public let assistant: BabylAI.Assistant?
-  public let attachmentSettings: BabylAI.AttachmentSettings?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(title: Swift.String, description: Swift.String? = nil, chatWithUs: Swift.Bool? = nil, options: [BabylAI.Option]? = nil, type: BabylAI.HelpScreenType = .optionsMenu, assistantId: Swift.String? = nil, assistant: BabylAI.Assistant? = nil, attachmentSettings: BabylAI.AttachmentSettings? = nil)
-  #endif
-  public init(from decoder: any Swift.Decoder) throws
-  public static func == (a: BabylAI.HelpScreen, b: BabylAI.HelpScreen) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
+public struct HelpScreen : Swift::Codable, Swift::Equatable {
+  public let title: Swift::String
+  public let description: Swift::String?
+  public let chatWithUs: Swift::Bool?
+  public let options: [BabylAI::Option]?
+  public let type: BabylAI::HelpScreenType
+  public let assistantId: Swift::String?
+  public let assistant: BabylAI::Assistant?
+  public let attachmentSettings: BabylAI::AttachmentSettings?
+  public init(title: Swift::String, description: Swift::String? = nil, chatWithUs: Swift::Bool? = nil, options: [BabylAI::Option]? = nil, type: BabylAI::HelpScreenType = .optionsMenu, assistantId: Swift::String? = nil, assistant: BabylAI::Assistant? = nil, attachmentSettings: BabylAI::AttachmentSettings? = nil)
+  public init(from decoder: any Swift::Decoder) throws
+  public static func == (a: BabylAI::HelpScreen, b: BabylAI::HelpScreen) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
 }
-public struct Option : Swift.Codable, Swift.Equatable, Swift.Identifiable {
-  public let id: Swift.String
-  public let helpScreenId: Swift.String
-  public let assistant: BabylAI.Assistant?
-  public let title: Swift.String
-  public let paragraphs: [Swift.String]
-  public let chatWithUs: Swift.Bool?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(id: Swift.String, helpScreenId: Swift.String, assistant: BabylAI.Assistant? = nil, title: Swift.String, paragraphs: [Swift.String], chatWithUs: Swift.Bool? = nil)
-  #endif
-  public static func == (a: BabylAI.Option, b: BabylAI.Option) -> Swift.Bool
-  public typealias ID = Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct Option : Swift::Codable, Swift::Equatable, Swift::Identifiable {
+  public let id: Swift::String
+  public let helpScreenId: Swift::String
+  public let assistant: BabylAI::Assistant?
+  public let title: Swift::String
+  public let paragraphs: [Swift::String]
+  public let chatWithUs: Swift::Bool?
+  public init(id: Swift::String, helpScreenId: Swift::String, assistant: BabylAI::Assistant? = nil, title: Swift::String, paragraphs: [Swift::String], chatWithUs: Swift::Bool? = nil)
+  public static func == (a: BabylAI::Option, b: BabylAI::Option) -> Swift::Bool
+  public typealias ID = Swift::String
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct RootSession : Swift.Codable, Swift.Equatable {
-  public let session: BabylAI.Session
-  public let ablyToken: Swift.String
-  public init(session: BabylAI.Session, ablyToken: Swift.String)
-  public static func == (a: BabylAI.RootSession, b: BabylAI.RootSession) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct RootSession : Swift::Codable, Swift::Equatable {
+  public let session: BabylAI::Session
+  public let ablyToken: Swift::String
+  public init(session: BabylAI::Session, ablyToken: Swift::String)
+  public static func == (a: BabylAI::RootSession, b: BabylAI::RootSession) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
-public struct Session : Swift.Codable, Swift.Equatable {
-  public let id: Swift.String
-  public let tenantId: Swift.String
-  public let optionId: Swift.String?
-  public let messages: [BabylAI.SenderMessage]
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(id: Swift.String, tenantId: Swift.String, optionId: Swift.String? = nil, messages: [BabylAI.SenderMessage])
-  #endif
-  public static func == (a: BabylAI.Session, b: BabylAI.Session) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct Session : Swift::Codable, Swift::Equatable {
+  public let id: Swift::String
+  public let tenantId: Swift::String
+  public let optionId: Swift::String?
+  public let messages: [BabylAI::SenderMessage]
+  public init(id: Swift::String, tenantId: Swift::String, optionId: Swift::String? = nil, messages: [BabylAI::SenderMessage])
+  public static func == (a: BabylAI::Session, b: BabylAI::Session) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
 }
 final public class AblyService {
-  final public var onMessageReceived: ((BabylAI.Message) -> Swift.Void)?
-  final public var onAgentJoined: ((Swift.String) -> Swift.Void)?
-  final public var onError: ((Swift.String) -> Swift.Void)?
-  final public var onConnectionStarted: (() -> Swift.Void)?
-  final public var onConnectionTerminated: (() -> Swift.Void)?
-  final public var onSessionEnded: (() -> Swift.Void)?
+  final public var onMessageReceived: ((BabylAI::Message) -> Swift::Void)?
+  final public var onAgentJoined: ((Swift::String) -> Swift::Void)?
+  final public var onError: ((Swift::String) -> Swift::Void)?
+  final public var onConnectionStarted: (() -> Swift::Void)?
+  final public var onConnectionTerminated: (() -> Swift::Void)?
+  final public var onSessionEnded: (() -> Swift::Void)?
   public init()
-  final public func initializeConnection(ablyToken: Swift.String)
+  final public func initializeConnection(ablyToken: Swift::String)
   final public func startConnection()
   final public func waitForConnection() async throws
   final public func stopConnection()
-  final public func isConnected() -> Swift.Bool
-  final public func joinGroup(tenantId: Swift.String, sessionId: Swift.String)
+  final public func isConnected() -> Swift::Bool
+  final public func joinGroup(tenantId: Swift::String, sessionId: Swift::String)
   final public func waitForSubscription() async throws
   final public func ensureReady() async throws
   @objc deinit
@@ -451,44 +401,40 @@ final public class AblyService {
 internal enum FrameworkAssets {
 }
 @_hasMissingDesignatedInitializers final public class ErrorMapper {
-  public static func map(_ error: any Swift.Error) -> BabylAI.BabylAIError
-  public static func mapURLError(_ urlError: Foundation.URLError) -> BabylAI.BabylAIError
-  public static func mapDecodingError(_ decodingError: Swift.DecodingError) -> BabylAI.BabylAIError
-  public static func mapEncodingError(_ encodingError: Swift.EncodingError) -> BabylAI.BabylAIError
-  public static func mapGenericError(_ error: any Swift.Error) -> BabylAI.BabylAIError
-  #if compiler(>=5.3) && $NonescapableTypes
-  public static func networkError(statusCode: Swift.Int, message: Swift.String? = nil) -> BabylAI.BabylAIError
-  #endif
-  public static func authenticationError(statusCode: Swift.Int) -> BabylAI.BabylAIError
-  public static func missingParameterError(_ parameter: Swift.String) -> BabylAI.BabylAIError
-  public static func systemError(_ message: Swift.String) -> BabylAI.BabylAIError
+  public static func map(_ error: any Swift::Error) -> BabylAI::BabylAIError
+  public static func mapURLError(_ urlError: Foundation::URLError) -> BabylAI::BabylAIError
+  public static func mapDecodingError(_ decodingError: Swift::DecodingError) -> BabylAI::BabylAIError
+  public static func mapEncodingError(_ encodingError: Swift::EncodingError) -> BabylAI::BabylAIError
+  public static func mapGenericError(_ error: any Swift::Error) -> BabylAI::BabylAIError
+  public static func networkError(statusCode: Swift::Int, message: Swift::String? = nil) -> BabylAI::BabylAIError
+  public static func authenticationError(statusCode: Swift::Int) -> BabylAI::BabylAIError
+  public static func missingParameterError(_ parameter: Swift::String) -> BabylAI::BabylAIError
+  public static func systemError(_ message: Swift::String) -> BabylAI::BabylAIError
   @objc deinit
 }
-extension Swift.Error {
-  public var asBabylAIError: BabylAI.BabylAIError {
+extension Swift::Error {
+  public var asBabylAIError: BabylAI::BabylAIError {
     get
   }
 }
-public enum CairoFontWeight : Swift.String {
+public enum CairoFontWeight : Swift::String {
   case regular
   case medium
   case semiBold
   case bold
   case italic
-  public var fontName: Swift.String {
+  public var fontName: Swift::String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
 public enum AppFont {
-  public static func cairo(_ weight: BabylAI.CairoFontWeight, size: CoreFoundation.CGFloat) -> SwiftUICore.Font
-  public static func cairoUIFont(_ weight: BabylAI.CairoFontWeight, size: CoreFoundation.CGFloat) -> UIKit.UIFont
+  public static func cairo(_ weight: BabylAI::CairoFontWeight, size: CoreFoundation::CGFloat) -> SwiftUICore::Font
+  public static func cairoUIFont(_ weight: BabylAI::CairoFontWeight, size: CoreFoundation::CGFloat) -> UIKit::UIFont
 }
 @_hasMissingDesignatedInitializers @usableFromInline
 final internal class BundleFinder {
@@ -497,18 +443,18 @@ final internal class BundleFinder {
 }
 @_hasMissingDesignatedInitializers final public class FontManager {
   public static func registerFonts()
-  public static func isRegistered() -> Swift.Bool
+  public static func isRegistered() -> Swift::Bool
   @objc deinit
 }
-extension SwiftUICore.View {
+extension SwiftUICore::View {
   @available(*, deprecated, message: "Use FontManager.registerFonts() in SDK initialization instead")
-  @_Concurrency.MainActor @preconcurrency public func registerFontsIfNeeded(from bundle: Foundation.Bundle = Bundle(for: BundleFinder.self)) -> some SwiftUICore.View
+  @_Concurrency::MainActor @preconcurrency public func registerFontsIfNeeded(from bundle: Foundation::Bundle = Bundle(for: BundleFinder.self)) -> some SwiftUICore::View
   
 }
 public struct MessageUIHelper {
-  public static func bubbleColor(for senderType: BabylAI.SenderType) -> SwiftUICore.Color
-  public static func textColor(for senderType: BabylAI.SenderType) -> SwiftUICore.Color
-  public static func iconName(for senderType: BabylAI.SenderType) -> Swift.String
+  public static func bubbleColor(for senderType: BabylAI::SenderType) -> SwiftUICore::Color
+  public static func textColor(for senderType: BabylAI::SenderType) -> SwiftUICore::Color
+  public static func iconName(for senderType: BabylAI::SenderType) -> Swift::String
 }
 
 
@@ -519,197 +465,174 @@ public struct MessageUIHelper {
 
 
 
-@_Concurrency.MainActor @preconcurrency public struct ThemedView<Content> : SwiftUICore.View where Content : SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public init(@SwiftUICore.ViewBuilder content: () -> Content)
-  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+@_Concurrency::MainActor @preconcurrency public struct ThemedView<Content> : SwiftUICore::View where Content : SwiftUICore::View {
+  @_Concurrency::MainActor @preconcurrency public init(@SwiftUICore::ViewBuilder content: () -> Content)
+  @_Concurrency::MainActor @preconcurrency public var body: some SwiftUICore::View {
     get
   }
   public typealias Body = @_opaqueReturnTypeOf("$s7BabylAI10ThemedViewV4bodyQrvp", 0) __<Content>
 }
-final public class AuthTokenInterceptor : BabylAI.RequestInterceptor {
-  public init(keychain: BabylAI.KeychainManager = KeychainManager(), clock: @escaping () -> Swift.Int = { Int(Date().timeIntervalSince1970) })
-  final public func intercept(_ request: inout Foundation.URLRequest) async
+final public class AuthTokenInterceptor : BabylAI::RequestInterceptor {
+  public init(keychain: BabylAI::KeychainManager = KeychainManager(), clock: @escaping () -> Swift::Int = { Int(Date().timeIntervalSince1970) })
+  final public func intercept(_ request: inout Foundation::URLRequest) async
   @objc deinit
 }
-public enum HTTPMethod : Swift.String {
+public enum HTTPMethod : Swift::String {
   case get
   case post
   case put
   case delete
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
 final public class NetworkClient {
-  public init(session: Foundation.URLSession = .shared, interceptors: [any BabylAI.RequestInterceptor] = [AuthTokenInterceptor()])
-  #if compiler(>=5.3) && $NonescapableTypes
+  public init(session: Foundation::URLSession = .shared, interceptors: [any BabylAI::RequestInterceptor] = [AuthTokenInterceptor()])
   @discardableResult
-  final public func request<T>(_ request: BabylAI.NetworkRequest, responseType: T.Type? = nil) async throws -> T? where T : Swift.Decodable
-  #endif
+  final public func request<T>(_ request: BabylAI::NetworkRequest, responseType: T.Type? = nil) async throws -> T? where T : Swift::Decodable
   @objc deinit
 }
-public enum NetworkError : Swift.Error, Foundation.LocalizedError {
+public enum NetworkError : Swift::Error, Foundation::LocalizedError {
   case invalidURL
-  case requestFailed(any Swift.Error)
+  case requestFailed(any Swift::Error)
   case invalidResponse
-  case decodingError(any Swift.Error)
-  case unexpectedStatusCode(Swift.Int)
+  case decodingError(any Swift::Error)
+  case unexpectedStatusCode(Swift::Int)
   case noData
-  #if compiler(>=5.3) && $NonescapableTypes
-  public var errorDescription: Swift.String? {
+  public var errorDescription: Swift::String? {
     get
   }
-  #endif
 }
 public struct NetworkRequest {
-  public let endpoint: any BabylAI.EndpointPath
-  public let method: BabylAI.HTTPMethod
-  public let headers: [Swift.String : Swift.String]
-  public let body: Foundation.Data?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(endpoint: any BabylAI.EndpointPath, method: BabylAI.HTTPMethod = .get, headers: [Swift.String : Swift.String] = [:], body: Foundation.Data? = nil)
-  #endif
+  public let endpoint: any BabylAI::EndpointPath
+  public let method: BabylAI::HTTPMethod
+  public let headers: [Swift::String : Swift::String]
+  public let body: Foundation::Data?
+  public init(endpoint: any BabylAI::EndpointPath, method: BabylAI::HTTPMethod = .get, headers: [Swift::String : Swift::String] = [:], body: Foundation::Data? = nil)
 }
 public protocol RequestInterceptor {
-  func intercept(_ request: inout Foundation.URLRequest) async
+  func intercept(_ request: inout Foundation::URLRequest) async
 }
 public protocol EndpointPath {
-  var fullPath: Swift.String { get }
+  var fullPath: Swift::String { get }
 }
 public enum Endpoints {
-  public struct GetScreen : BabylAI.EndpointPath {
-    public var fullPath: Swift.String {
+  public struct GetScreen : BabylAI::EndpointPath {
+    public var fullPath: Swift::String {
       get
     }
   }
-  public struct CreateSession : BabylAI.EndpointPath {
-    public var fullPath: Swift.String {
+  public struct CreateSession : BabylAI::EndpointPath {
+    public var fullPath: Swift::String {
       get
     }
   }
-  public struct SendMessage : BabylAI.EndpointPath {
-    public var fullPath: Swift.String {
+  public struct SendMessage : BabylAI::EndpointPath {
+    public var fullPath: Swift::String {
       get
     }
   }
-  public struct Messages : BabylAI.EndpointPath {
-    public var fullPath: Swift.String {
+  public struct Messages : BabylAI::EndpointPath {
+    public var fullPath: Swift::String {
       get
     }
   }
-  public struct CloseSession : BabylAI.EndpointPath {
-    public var fullPath: Swift.String {
+  public struct CloseSession : BabylAI::EndpointPath {
+    public var fullPath: Swift::String {
       get
     }
   }
-  public struct SubmitReview : BabylAI.EndpointPath {
-    public var fullPath: Swift.String {
+  public struct SubmitReview : BabylAI::EndpointPath {
+    public var fullPath: Swift::String {
       get
     }
   }
-  public struct PresignUpload : BabylAI.EndpointPath {
-    public var fullPath: Swift.String {
+  public struct PresignUpload : BabylAI::EndpointPath {
+    public var fullPath: Swift::String {
       get
     }
   }
-  public static var receiveTimeout: Swift.Int {
+  public static var receiveTimeout: Swift::Int {
     get
   }
-  public static var connectionTimeout: Swift.Int {
+  public static var connectionTimeout: Swift::Int {
     get
   }
 }
 public struct KeychainManager {
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func getAccessToken() async -> Swift.String?
-  #endif
+  public func getAccessToken() async -> Swift::String?
   @discardableResult
-  public func saveAccessToken(_ token: Swift.String) async -> Swift.Bool
+  public func saveAccessToken(_ token: Swift::String) async -> Swift::Bool
   @discardableResult
-  public func removeAccessToken() async -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func getRefreshToken() async -> Swift.String?
-  #endif
+  public func removeAccessToken() async -> Swift::Bool
+  public func getRefreshToken() async -> Swift::String?
   @discardableResult
-  public func saveRefreshToken(_ token: Swift.String) async -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func getExpireTime() async -> Swift.Int?
-  #endif
+  public func saveRefreshToken(_ token: Swift::String) async -> Swift::Bool
+  public func getExpireTime() async -> Swift::Int?
   @discardableResult
-  public func saveExpireTime(_ timestamp: Swift.Int) async -> Swift.Bool
+  public func saveExpireTime(_ timestamp: Swift::Int) async -> Swift::Bool
   @discardableResult
-  public func clearAll() async -> Swift.Bool
+  public func clearAll() async -> Swift::Bool
 }
-public enum BabylAITheme : Swift.String {
+public enum BabylAITheme : Swift::String {
   case light
   case dark
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
 @_hasMissingDesignatedInitializers final public class BabylAISDK {
-  public static let shared: BabylAI.BabylAISDK
-  #if compiler(>=5.3) && $NonescapableTypes
-  final public func initialize(with config: BabylAI.EnvironmentConfig, locale: BabylAI.BabylAILocale, userInfo: [Swift.String : Any]? = nil, themeConfig: BabylAI.ThemeConfig? = nil, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil)
-  #endif
-  @_Concurrency.MainActor final public func reset()
-  final public func setTokenCallback(_ callback: @escaping () async throws -> Swift.String)
-  final public func setErrorCallback(_ callback: @escaping (BabylAI.BabylAIError) -> Swift.Void)
-  final public func setLocale(_ locale: BabylAI.BabylAILocale)
-  final public func getLocale() -> BabylAI.BabylAILocale
-  @_Concurrency.MainActor final public func configureKeyboardManagerExclusion()
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor final public func makeView(theme: BabylAI.BabylAITheme, userInfo: [Swift.String : Any], screenId: Swift.String, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil) -> some SwiftUICore.View
+  public static let shared: BabylAI::BabylAISDK
+  final public func initialize(with config: BabylAI::EnvironmentConfig, locale: BabylAI::BabylAILocale, userInfo: [Swift::String : Any]? = nil, themeConfig: BabylAI::ThemeConfig? = nil, onMessageReceived: ((Swift::String) -> Swift::Void)? = nil, onErrorReceived: ((BabylAI::BabylAIError) -> Swift::Void)? = nil)
+  @_Concurrency::MainActor final public func reset()
+  final public func setTokenCallback(_ callback: @escaping () async throws -> Swift::String)
+  final public func setErrorCallback(_ callback: @escaping (BabylAI::BabylAIError) -> Swift::Void)
+  final public func setLocale(_ locale: BabylAI::BabylAILocale)
+  final public func getLocale() -> BabylAI::BabylAILocale
+  @_Concurrency::MainActor final public func configureKeyboardManagerExclusion()
+  final public func handleEventsForBackgroundURLSession(_ identifier: Swift::String, completionHandler: @escaping () -> Swift::Void) -> Swift::Bool
+  @_Concurrency::MainActor final public func makeView(theme: BabylAI::BabylAITheme, userInfo: [Swift::String : Any], screenId: Swift::String, onMessageReceived: ((Swift::String) -> Swift::Void)? = nil, onErrorReceived: ((BabylAI::BabylAIError) -> Swift::Void)? = nil) -> some SwiftUICore::View
   
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor final public func viewer(isDirect: Swift.Bool = false, screenId: Swift.String, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil) -> some SwiftUICore.View
+  @_Concurrency::MainActor final public func viewer(isDirect: Swift::Bool = false, screenId: Swift::String, onMessageReceived: ((Swift::String) -> Swift::Void)? = nil, onErrorReceived: ((BabylAI::BabylAIError) -> Swift::Void)? = nil, onDismiss: (() -> Swift::Void)? = nil) -> some SwiftUICore::View
   
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor final public func viewerController(theme: BabylAI.BabylAITheme, isDirect: Swift.Bool = false, screenId: Swift.String, onMessageReceived: ((Swift.String) -> Swift.Void)? = nil, onErrorReceived: ((BabylAI.BabylAIError) -> Swift.Void)? = nil) -> UIKit.UIViewController
-  #endif
-  @_Concurrency.MainActor final public func presentActiveChat(theme: BabylAI.BabylAITheme, screenId: Swift.String)
-  @_Concurrency.MainActor final public func present(theme: BabylAI.BabylAITheme, screenId: Swift.String)
+  @_Concurrency::MainActor final public func viewerController(theme: BabylAI::BabylAITheme, isDirect: Swift::Bool = false, screenId: Swift::String, onMessageReceived: ((Swift::String) -> Swift::Void)? = nil, onErrorReceived: ((BabylAI::BabylAIError) -> Swift::Void)? = nil) -> UIKit::UIViewController
+  @_Concurrency::MainActor final public func presentActiveChat(theme: BabylAI::BabylAITheme, screenId: Swift::String)
+  @_Concurrency::MainActor final public func present(theme: BabylAI::BabylAITheme, screenId: Swift::String)
   @objc deinit
 }
-extension BabylAI.BabylAIEnvironment : Swift.Equatable {}
-extension BabylAI.BabylAIEnvironment : Swift.Hashable {}
-extension BabylAI.BabylAIEnvironment : Swift.RawRepresentable {}
-extension BabylAI.ThemedColorReader : Swift.Sendable {}
-extension BabylAI.AblyMessageActionType : Swift.Equatable {}
-extension BabylAI.AblyMessageActionType : Swift.Hashable {}
-extension BabylAI.AblyMessageActionType : Swift.RawRepresentable {}
-extension BabylAI.FeedbackRating : Swift.Hashable {}
-extension BabylAI.FeedbackRating : Swift.RawRepresentable {}
-extension BabylAI.FeedbackState : Swift.Hashable {}
-extension BabylAI.FeedbackState : Swift.RawRepresentable {}
-extension BabylAI.HelpScreenType : Swift.Hashable {}
-extension BabylAI.HelpScreenType : Swift.RawRepresentable {}
-extension BabylAI.BabylAILocale : Swift.Equatable {}
-extension BabylAI.BabylAILocale : Swift.Hashable {}
-extension BabylAI.SenderType : Swift.Equatable {}
-extension BabylAI.SenderType : Swift.Hashable {}
-extension BabylAI.SenderType : Swift.RawRepresentable {}
-extension BabylAI.AttachmentUploadState : Swift.Hashable {}
-extension BabylAI.MessageRetryState : Swift.Hashable {}
-extension BabylAI.MessageRetryState : Swift.RawRepresentable {}
-extension BabylAI.CairoFontWeight : Swift.Equatable {}
-extension BabylAI.CairoFontWeight : Swift.Hashable {}
-extension BabylAI.CairoFontWeight : Swift.RawRepresentable {}
-extension BabylAI.ThemedView : Swift.Sendable {}
-extension BabylAI.HTTPMethod : Swift.Equatable {}
-extension BabylAI.HTTPMethod : Swift.Hashable {}
-extension BabylAI.HTTPMethod : Swift.RawRepresentable {}
-extension BabylAI.BabylAITheme : Swift.Equatable {}
-extension BabylAI.BabylAITheme : Swift.Hashable {}
-extension BabylAI.BabylAITheme : Swift.RawRepresentable {}
+extension BabylAI::BabylAIEnvironment : Swift::Equatable {}
+extension BabylAI::BabylAIEnvironment : Swift::Hashable {}
+extension BabylAI::BabylAIEnvironment : Swift::RawRepresentable {}
+extension BabylAI::ThemedColorReader : Swift::Sendable {}
+extension BabylAI::AblyMessageActionType : Swift::Equatable {}
+extension BabylAI::AblyMessageActionType : Swift::Hashable {}
+extension BabylAI::AblyMessageActionType : Swift::RawRepresentable {}
+extension BabylAI::FeedbackRating : Swift::Hashable {}
+extension BabylAI::FeedbackRating : Swift::RawRepresentable {}
+extension BabylAI::FeedbackState : Swift::Hashable {}
+extension BabylAI::FeedbackState : Swift::RawRepresentable {}
+extension BabylAI::HelpScreenType : Swift::Hashable {}
+extension BabylAI::HelpScreenType : Swift::RawRepresentable {}
+extension BabylAI::BabylAILocale : Swift::Equatable {}
+extension BabylAI::BabylAILocale : Swift::Hashable {}
+extension BabylAI::SenderType : Swift::Equatable {}
+extension BabylAI::SenderType : Swift::Hashable {}
+extension BabylAI::SenderType : Swift::RawRepresentable {}
+extension BabylAI::AttachmentUploadState : Swift::Hashable {}
+extension BabylAI::MessageRetryState : Swift::Hashable {}
+extension BabylAI::MessageRetryState : Swift::RawRepresentable {}
+extension BabylAI::CairoFontWeight : Swift::Equatable {}
+extension BabylAI::CairoFontWeight : Swift::Hashable {}
+extension BabylAI::CairoFontWeight : Swift::RawRepresentable {}
+extension BabylAI::ThemedView : Swift::Sendable {}
+extension BabylAI::HTTPMethod : Swift::Equatable {}
+extension BabylAI::HTTPMethod : Swift::Hashable {}
+extension BabylAI::HTTPMethod : Swift::RawRepresentable {}
+extension BabylAI::BabylAITheme : Swift::Equatable {}
+extension BabylAI::BabylAITheme : Swift::Hashable {}
+extension BabylAI::BabylAITheme : Swift::RawRepresentable {}
